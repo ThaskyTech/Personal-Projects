@@ -1,0 +1,713 @@
+2026-03-10 14:30:06,670 | WARNING  | DataEngine | No CSV/Parquet file found for EURUSD H4 in data\historical
+2026-03-10 14:30:06,671 | WARNING  | DataEngine | No data found for EURUSD H4
+2026-03-10 14:30:06,672 | WARNING  | DataEngine | No CSV/Parquet file found for EURUSD M15 in data\historical
+2026-03-10 14:30:06,672 | WARNING  | DataEngine | No data found for EURUSD M15
+2026-03-10 14:30:06,673 | WARNING  | DataEngine | No CSV/Parquet file found for GBPUSD H4 in data\historical
+2026-03-10 14:30:06,674 | WARNING  | DataEngine | No data found for GBPUSD H4
+2026-03-10 14:30:06,674 | WARNING  | DataEngine | No CSV/Parquet file found for GBPUSD M15 in data\historical
+2026-03-10 14:30:06,676 | WARNING  | DataEngine | No data found for GBPUSD M15
+2026-03-10 14:30:06,676 | ERROR    | DataEngine | Missing H4 data for EURUSD
+2026-03-10 14:30:06,677 | ERROR    | DataEngine | Missing H4 data for GBPUSD
+2026-03-10 14:30:06,677 | WARNING  | TrainScript | Some instruments do not meet the 10-year minimum history requirement. Training will proceed but model quality may be reduced.
+2026-03-10 14:30:06,678 | INFO     | TrainScript | 
+==================================================
+2026-03-10 14:30:06,678 | INFO     | TrainScript |   TRAINING: EURUSD
+2026-03-10 14:30:06,678 | INFO     | TrainScript | ==================================================
+2026-03-10 14:30:06,679 | WARNING  | DataEngine | No CSV/Parquet file found for EURUSD H4 in data\historical
+2026-03-10 14:30:06,680 | WARNING  | DataEngine | No CSV/Parquet file found for EURUSD M15 in data\historical
+2026-03-10 14:30:06,680 | ERROR    | TrainScript | Cannot train EURUSD: missing data files.
+2026-03-10 14:30:06,680 | ERROR    | TrainScript | Place CSV files in data/historical/ as:
+2026-03-10 14:30:06,681 | ERROR    | TrainScript |   EURUSD_H4.csv  (columns: datetime,open,high,low,close,volume)
+2026-03-10 14:30:06,681 | ERROR    | TrainScript |   EURUSD_M15.csv
+2026-03-10 14:30:06,681 | INFO     | TrainScript | 
+Training complete: 0/1 instruments trained
+2026-03-10 14:30:06,682 | WARNING  | TrainScript | Some instruments failed. Check logs and data files.
+2026-03-10 14:32:13,966 | INFO     | DataEngine | EURUSD H4 history: 16.0 years — OK
+2026-03-10 14:32:13,966 | INFO     | DataEngine | GBPUSD H4 history: 16.0 years — OK
+2026-03-10 14:32:13,967 | INFO     | TrainScript | 
+==================================================
+2026-03-10 14:32:13,967 | INFO     | TrainScript |   TRAINING: EURUSD
+2026-03-10 14:32:13,967 | INFO     | TrainScript | ==================================================
+2026-03-10 14:32:13,973 | INFO     | TrainScript | Running QMRP walk-forward optimisation...
+2026-03-10 14:32:13,974 | INFO     | WalkForward | QMRP started for EURUSD
+2026-03-10 14:32:13,975 | INFO     | WalkForward | Generated 56 walk-forward folds
+2026-03-10 14:32:13,976 | INFO     | WalkForward | Processing fold 1/56
+2026-03-10 14:32:24,422 | INFO     | H4BiasModel | H4BiasModel trained for EURUSD on 2039 samples, 14 features
+2026-03-10 14:32:25,565 | ERROR    | WalkForward | Fold 0 evaluation error: "None of ['datetime'] are in the columns"
+Traceback (most recent call last):
+  File "C:\Users\LTMol\Desktop\trading_bot_v2\trading_bot\backtest\walk_forward.py", line 233, in _evaluate_fold
+    m15_with_ctx = FeatureEngineer.merge_h4_context_into_m15(
+        m15_feats.loc[train_s:train_e],
+        h4_feats.loc[train_s:train_e]
+    )
+  File "C:\Users\LTMol\Desktop\trading_bot_v2\trading_bot\features\feature_engineer.py", line 274, in merge_h4_context_into_m15
+    merged = merged.set_index(m15_col)
+  File "C:\Users\LTMol\Desktop\trading_bot_v2\trading_bot\.venv\Lib\site-packages\pandas\core\frame.py", line 6977, in set_index
+    raise KeyError(f"None of {missing} are in the columns")
+KeyError: "None of ['datetime'] are in the columns"
+2026-03-10 14:32:25,578 | INFO     | WalkForward | Fold 1: FAIL | Sortino=0.000 | MaxDD=0.00% | Trades=0
+2026-03-10 14:32:25,579 | INFO     | WalkForward | Processing fold 2/56
+2026-03-10 14:32:26,698 | INFO     | H4BiasModel | H4BiasModel trained for EURUSD on 2191 samples, 14 features
+2026-03-10 14:32:27,924 | ERROR    | WalkForward | Fold 1 evaluation error: "None of ['datetime'] are in the columns"
+Traceback (most recent call last):
+  File "C:\Users\LTMol\Desktop\trading_bot_v2\trading_bot\backtest\walk_forward.py", line 233, in _evaluate_fold
+    m15_with_ctx = FeatureEngineer.merge_h4_context_into_m15(
+        m15_feats.loc[train_s:train_e],
+        h4_feats.loc[train_s:train_e]
+    )
+  File "C:\Users\LTMol\Desktop\trading_bot_v2\trading_bot\features\feature_engineer.py", line 274, in merge_h4_context_into_m15
+    merged = merged.set_index(m15_col)
+  File "C:\Users\LTMol\Desktop\trading_bot_v2\trading_bot\.venv\Lib\site-packages\pandas\core\frame.py", line 6977, in set_index
+    raise KeyError(f"None of {missing} are in the columns")
+KeyError: "None of ['datetime'] are in the columns"
+2026-03-10 14:32:27,931 | INFO     | WalkForward | Fold 2: FAIL | Sortino=0.000 | MaxDD=0.00% | Trades=0
+2026-03-10 14:32:27,932 | INFO     | WalkForward | Processing fold 3/56
+2026-03-10 14:32:29,194 | INFO     | H4BiasModel | H4BiasModel trained for EURUSD on 2191 samples, 14 features
+2026-03-10 14:32:30,575 | ERROR    | WalkForward | Fold 2 evaluation error: "None of ['datetime'] are in the columns"
+Traceback (most recent call last):
+  File "C:\Users\LTMol\Desktop\trading_bot_v2\trading_bot\backtest\walk_forward.py", line 233, in _evaluate_fold
+    m15_with_ctx = FeatureEngineer.merge_h4_context_into_m15(
+        m15_feats.loc[train_s:train_e],
+        h4_feats.loc[train_s:train_e]
+    )
+  File "C:\Users\LTMol\Desktop\trading_bot_v2\trading_bot\features\feature_engineer.py", line 274, in merge_h4_context_into_m15
+    merged = merged.set_index(m15_col)
+  File "C:\Users\LTMol\Desktop\trading_bot_v2\trading_bot\.venv\Lib\site-packages\pandas\core\frame.py", line 6977, in set_index
+    raise KeyError(f"None of {missing} are in the columns")
+KeyError: "None of ['datetime'] are in the columns"
+2026-03-10 14:32:30,583 | INFO     | WalkForward | Fold 3: FAIL | Sortino=0.000 | MaxDD=0.00% | Trades=0
+2026-03-10 14:32:30,583 | INFO     | WalkForward | Processing fold 4/56
+2026-03-10 14:32:32,017 | INFO     | H4BiasModel | H4BiasModel trained for EURUSD on 2191 samples, 14 features
+2026-03-10 14:32:33,657 | ERROR    | WalkForward | Fold 3 evaluation error: "None of ['datetime'] are in the columns"
+Traceback (most recent call last):
+  File "C:\Users\LTMol\Desktop\trading_bot_v2\trading_bot\backtest\walk_forward.py", line 233, in _evaluate_fold
+    m15_with_ctx = FeatureEngineer.merge_h4_context_into_m15(
+        m15_feats.loc[train_s:train_e],
+        h4_feats.loc[train_s:train_e]
+    )
+  File "C:\Users\LTMol\Desktop\trading_bot_v2\trading_bot\features\feature_engineer.py", line 274, in merge_h4_context_into_m15
+    merged = merged.set_index(m15_col)
+  File "C:\Users\LTMol\Desktop\trading_bot_v2\trading_bot\.venv\Lib\site-packages\pandas\core\frame.py", line 6977, in set_index
+    raise KeyError(f"None of {missing} are in the columns")
+KeyError: "None of ['datetime'] are in the columns"
+2026-03-10 14:32:33,663 | INFO     | WalkForward | Fold 4: FAIL | Sortino=0.000 | MaxDD=0.00% | Trades=0
+2026-03-10 14:32:33,664 | INFO     | WalkForward | Processing fold 5/56
+2026-03-10 14:32:35,127 | INFO     | H4BiasModel | H4BiasModel trained for EURUSD on 2191 samples, 14 features
+2026-03-10 14:32:36,930 | ERROR    | WalkForward | Fold 4 evaluation error: "None of ['datetime'] are in the columns"
+Traceback (most recent call last):
+  File "C:\Users\LTMol\Desktop\trading_bot_v2\trading_bot\backtest\walk_forward.py", line 233, in _evaluate_fold
+    m15_with_ctx = FeatureEngineer.merge_h4_context_into_m15(
+        m15_feats.loc[train_s:train_e],
+        h4_feats.loc[train_s:train_e]
+    )
+  File "C:\Users\LTMol\Desktop\trading_bot_v2\trading_bot\features\feature_engineer.py", line 274, in merge_h4_context_into_m15
+    merged = merged.set_index(m15_col)
+  File "C:\Users\LTMol\Desktop\trading_bot_v2\trading_bot\.venv\Lib\site-packages\pandas\core\frame.py", line 6977, in set_index
+    raise KeyError(f"None of {missing} are in the columns")
+KeyError: "None of ['datetime'] are in the columns"
+2026-03-10 14:32:36,935 | INFO     | WalkForward | Fold 5: FAIL | Sortino=0.000 | MaxDD=0.00% | Trades=0
+2026-03-10 14:32:36,936 | INFO     | WalkForward | Processing fold 6/56
+2026-03-10 14:32:38,770 | INFO     | H4BiasModel | H4BiasModel trained for EURUSD on 2197 samples, 14 features
+2026-03-10 14:32:40,858 | ERROR    | WalkForward | Fold 5 evaluation error: "None of ['datetime'] are in the columns"
+Traceback (most recent call last):
+  File "C:\Users\LTMol\Desktop\trading_bot_v2\trading_bot\backtest\walk_forward.py", line 233, in _evaluate_fold
+    m15_with_ctx = FeatureEngineer.merge_h4_context_into_m15(
+        m15_feats.loc[train_s:train_e],
+        h4_feats.loc[train_s:train_e]
+    )
+  File "C:\Users\LTMol\Desktop\trading_bot_v2\trading_bot\features\feature_engineer.py", line 274, in merge_h4_context_into_m15
+    merged = merged.set_index(m15_col)
+  File "C:\Users\LTMol\Desktop\trading_bot_v2\trading_bot\.venv\Lib\site-packages\pandas\core\frame.py", line 6977, in set_index
+    raise KeyError(f"None of {missing} are in the columns")
+KeyError: "None of ['datetime'] are in the columns"
+2026-03-10 14:32:40,863 | INFO     | WalkForward | Fold 6: FAIL | Sortino=0.000 | MaxDD=0.00% | Trades=0
+2026-03-10 14:32:40,864 | INFO     | WalkForward | Processing fold 7/56
+2026-03-10 14:32:42,710 | INFO     | H4BiasModel | H4BiasModel trained for EURUSD on 2197 samples, 14 features
+2026-03-10 14:32:44,988 | ERROR    | WalkForward | Fold 6 evaluation error: "None of ['datetime'] are in the columns"
+Traceback (most recent call last):
+  File "C:\Users\LTMol\Desktop\trading_bot_v2\trading_bot\backtest\walk_forward.py", line 233, in _evaluate_fold
+    m15_with_ctx = FeatureEngineer.merge_h4_context_into_m15(
+        m15_feats.loc[train_s:train_e],
+        h4_feats.loc[train_s:train_e]
+    )
+  File "C:\Users\LTMol\Desktop\trading_bot_v2\trading_bot\features\feature_engineer.py", line 274, in merge_h4_context_into_m15
+    merged = merged.set_index(m15_col)
+  File "C:\Users\LTMol\Desktop\trading_bot_v2\trading_bot\.venv\Lib\site-packages\pandas\core\frame.py", line 6977, in set_index
+    raise KeyError(f"None of {missing} are in the columns")
+KeyError: "None of ['datetime'] are in the columns"
+2026-03-10 14:32:44,993 | INFO     | WalkForward | Fold 7: FAIL | Sortino=0.000 | MaxDD=0.00% | Trades=0
+2026-03-10 14:32:44,994 | INFO     | WalkForward | Processing fold 8/56
+2026-03-10 14:32:46,821 | INFO     | H4BiasModel | H4BiasModel trained for EURUSD on 2197 samples, 14 features
+2026-03-10 14:32:49,234 | ERROR    | WalkForward | Fold 7 evaluation error: "None of ['datetime'] are in the columns"
+Traceback (most recent call last):
+  File "C:\Users\LTMol\Desktop\trading_bot_v2\trading_bot\backtest\walk_forward.py", line 233, in _evaluate_fold
+    m15_with_ctx = FeatureEngineer.merge_h4_context_into_m15(
+        m15_feats.loc[train_s:train_e],
+        h4_feats.loc[train_s:train_e]
+    )
+  File "C:\Users\LTMol\Desktop\trading_bot_v2\trading_bot\features\feature_engineer.py", line 274, in merge_h4_context_into_m15
+    merged = merged.set_index(m15_col)
+  File "C:\Users\LTMol\Desktop\trading_bot_v2\trading_bot\.venv\Lib\site-packages\pandas\core\frame.py", line 6977, in set_index
+    raise KeyError(f"None of {missing} are in the columns")
+KeyError: "None of ['datetime'] are in the columns"
+2026-03-10 14:32:49,241 | INFO     | WalkForward | Fold 8: FAIL | Sortino=0.000 | MaxDD=0.00% | Trades=0
+2026-03-10 14:32:49,242 | INFO     | WalkForward | Processing fold 9/56
+2026-03-10 14:32:51,306 | INFO     | H4BiasModel | H4BiasModel trained for EURUSD on 2197 samples, 14 features
+2026-03-10 14:32:53,934 | ERROR    | WalkForward | Fold 8 evaluation error: "None of ['datetime'] are in the columns"
+Traceback (most recent call last):
+  File "C:\Users\LTMol\Desktop\trading_bot_v2\trading_bot\backtest\walk_forward.py", line 233, in _evaluate_fold
+    m15_with_ctx = FeatureEngineer.merge_h4_context_into_m15(
+        m15_feats.loc[train_s:train_e],
+        h4_feats.loc[train_s:train_e]
+    )
+  File "C:\Users\LTMol\Desktop\trading_bot_v2\trading_bot\features\feature_engineer.py", line 274, in merge_h4_context_into_m15
+    merged = merged.set_index(m15_col)
+  File "C:\Users\LTMol\Desktop\trading_bot_v2\trading_bot\.venv\Lib\site-packages\pandas\core\frame.py", line 6977, in set_index
+    raise KeyError(f"None of {missing} are in the columns")
+KeyError: "None of ['datetime'] are in the columns"
+2026-03-10 14:32:53,942 | INFO     | WalkForward | Fold 9: FAIL | Sortino=0.000 | MaxDD=0.00% | Trades=0
+2026-03-10 14:32:53,942 | INFO     | WalkForward | Processing fold 10/56
+2026-03-10 14:32:56,080 | INFO     | H4BiasModel | H4BiasModel trained for EURUSD on 2191 samples, 14 features
+2026-03-10 14:32:58,885 | ERROR    | WalkForward | Fold 9 evaluation error: "None of ['datetime'] are in the columns"
+Traceback (most recent call last):
+  File "C:\Users\LTMol\Desktop\trading_bot_v2\trading_bot\backtest\walk_forward.py", line 233, in _evaluate_fold
+    m15_with_ctx = FeatureEngineer.merge_h4_context_into_m15(
+        m15_feats.loc[train_s:train_e],
+        h4_feats.loc[train_s:train_e]
+    )
+  File "C:\Users\LTMol\Desktop\trading_bot_v2\trading_bot\features\feature_engineer.py", line 274, in merge_h4_context_into_m15
+    merged = merged.set_index(m15_col)
+  File "C:\Users\LTMol\Desktop\trading_bot_v2\trading_bot\.venv\Lib\site-packages\pandas\core\frame.py", line 6977, in set_index
+    raise KeyError(f"None of {missing} are in the columns")
+KeyError: "None of ['datetime'] are in the columns"
+2026-03-10 14:32:58,891 | INFO     | WalkForward | Fold 10: FAIL | Sortino=0.000 | MaxDD=0.00% | Trades=0
+2026-03-10 14:32:58,892 | INFO     | WalkForward | Processing fold 11/56
+2026-03-10 14:33:01,204 | INFO     | H4BiasModel | H4BiasModel trained for EURUSD on 2191 samples, 14 features
+2026-03-10 14:33:04,239 | ERROR    | WalkForward | Fold 10 evaluation error: "None of ['datetime'] are in the columns"
+Traceback (most recent call last):
+  File "C:\Users\LTMol\Desktop\trading_bot_v2\trading_bot\backtest\walk_forward.py", line 233, in _evaluate_fold
+    m15_with_ctx = FeatureEngineer.merge_h4_context_into_m15(
+        m15_feats.loc[train_s:train_e],
+        h4_feats.loc[train_s:train_e]
+    )
+  File "C:\Users\LTMol\Desktop\trading_bot_v2\trading_bot\features\feature_engineer.py", line 274, in merge_h4_context_into_m15
+    merged = merged.set_index(m15_col)
+  File "C:\Users\LTMol\Desktop\trading_bot_v2\trading_bot\.venv\Lib\site-packages\pandas\core\frame.py", line 6977, in set_index
+    raise KeyError(f"None of {missing} are in the columns")
+KeyError: "None of ['datetime'] are in the columns"
+2026-03-10 14:33:04,248 | INFO     | WalkForward | Fold 11: FAIL | Sortino=0.000 | MaxDD=0.00% | Trades=0
+2026-03-10 14:33:04,249 | INFO     | WalkForward | Processing fold 12/56
+2026-03-10 14:33:06,608 | INFO     | H4BiasModel | H4BiasModel trained for EURUSD on 2191 samples, 14 features
+2026-03-10 14:33:09,831 | ERROR    | WalkForward | Fold 11 evaluation error: "None of ['datetime'] are in the columns"
+Traceback (most recent call last):
+  File "C:\Users\LTMol\Desktop\trading_bot_v2\trading_bot\backtest\walk_forward.py", line 233, in _evaluate_fold
+    m15_with_ctx = FeatureEngineer.merge_h4_context_into_m15(
+        m15_feats.loc[train_s:train_e],
+        h4_feats.loc[train_s:train_e]
+    )
+  File "C:\Users\LTMol\Desktop\trading_bot_v2\trading_bot\features\feature_engineer.py", line 274, in merge_h4_context_into_m15
+    merged = merged.set_index(m15_col)
+  File "C:\Users\LTMol\Desktop\trading_bot_v2\trading_bot\.venv\Lib\site-packages\pandas\core\frame.py", line 6977, in set_index
+    raise KeyError(f"None of {missing} are in the columns")
+KeyError: "None of ['datetime'] are in the columns"
+2026-03-10 14:33:09,837 | INFO     | WalkForward | Fold 12: FAIL | Sortino=0.000 | MaxDD=0.00% | Trades=0
+2026-03-10 14:33:09,838 | INFO     | WalkForward | Processing fold 13/56
+2026-03-10 14:33:12,457 | INFO     | H4BiasModel | H4BiasModel trained for EURUSD on 2191 samples, 14 features
+2026-03-10 14:51:12,849 | INFO     | DataEngine | EURUSD H4 history: 16.0 years — OK
+2026-03-10 14:51:12,849 | INFO     | DataEngine | GBPUSD H4 history: 16.0 years — OK
+2026-03-10 14:51:12,850 | INFO     | TrainScript | 
+==================================================
+2026-03-10 14:51:12,850 | INFO     | TrainScript |   TRAINING: EURUSD
+2026-03-10 14:51:12,850 | INFO     | TrainScript | ==================================================
+2026-03-10 14:51:12,856 | INFO     | TrainScript | Running QMRP walk-forward optimisation...
+2026-03-10 14:51:12,857 | INFO     | WalkForward | QMRP started for EURUSD
+2026-03-10 14:51:12,857 | INFO     | WalkForward | Generated 56 walk-forward folds
+2026-03-10 14:51:12,858 | INFO     | WalkForward | Processing fold 1/56
+2026-03-10 14:51:15,617 | INFO     | H4BiasModel | H4BiasModel trained for EURUSD on 2039 samples, 14 features
+2026-03-10 14:51:18,387 | INFO     | M15EntryModel | M15EntryModel trained for EURUSD | long hit rate: 8.37% | short hit rate: 0.00% | samples: 34753 | features: 37
+2026-03-10 14:56:22,896 | INFO     | DataEngine | EURUSD H4 history: 16.0 years — OK
+2026-03-10 14:56:22,897 | INFO     | DataEngine | GBPUSD H4 history: 16.0 years — OK
+2026-03-10 14:56:22,898 | INFO     | TrainScript | 
+==================================================
+2026-03-10 14:56:22,898 | INFO     | TrainScript |   TRAINING: EURUSD
+2026-03-10 14:56:22,898 | INFO     | TrainScript | ==================================================
+2026-03-10 14:56:22,904 | INFO     | TrainScript | Running QMRP walk-forward optimisation...
+2026-03-10 14:56:22,905 | INFO     | WalkForward | QMRP started for EURUSD
+2026-03-10 14:56:22,906 | INFO     | WalkForward | Generated 56 walk-forward folds
+2026-03-10 14:56:22,906 | INFO     | WalkForward | Processing fold 1/56
+2026-03-10 14:56:26,062 | INFO     | H4BiasModel | H4BiasModel trained for EURUSD on 2039 samples, 14 features
+2026-03-10 14:56:28,551 | INFO     | M15EntryModel | M15EntryModel trained for EURUSD | long hit rate: 8.37% | short hit rate: 0.00% | samples: 34753 | features: 37
+2026-03-10 14:59:55,750 | INFO     | WalkForward | Fold 1: FAIL | Sortino=0.000 | MaxDD=2.94% | Trades=15
+2026-03-10 14:59:55,751 | INFO     | WalkForward | Processing fold 2/56
+2026-03-10 14:59:57,221 | INFO     | H4BiasModel | H4BiasModel trained for EURUSD on 2191 samples, 14 features
+2026-03-10 15:00:00,475 | INFO     | M15EntryModel | M15EntryModel trained for EURUSD | long hit rate: 8.76% | short hit rate: 0.00% | samples: 35041 | features: 37
+2026-03-10 15:03:32,872 | INFO     | WalkForward | Fold 2: FAIL | Sortino=0.000 | MaxDD=2.94% | Trades=10
+2026-03-10 15:03:32,873 | INFO     | WalkForward | Processing fold 3/56
+2026-03-10 15:03:34,358 | INFO     | H4BiasModel | H4BiasModel trained for EURUSD on 2191 samples, 14 features
+2026-03-10 15:03:37,895 | INFO     | M15EntryModel | M15EntryModel trained for EURUSD | long hit rate: 9.24% | short hit rate: 0.00% | samples: 35041 | features: 37
+2026-03-10 15:07:01,378 | INFO     | WalkForward | Fold 3: FAIL | Sortino=2000000.000 | MaxDD=2.94% | Trades=8
+2026-03-10 15:07:01,379 | INFO     | WalkForward | Processing fold 4/56
+2026-03-10 15:07:02,722 | INFO     | H4BiasModel | H4BiasModel trained for EURUSD on 2191 samples, 14 features
+2026-03-10 15:07:06,224 | INFO     | M15EntryModel | M15EntryModel trained for EURUSD | long hit rate: 9.25% | short hit rate: 0.00% | samples: 35041 | features: 37
+2026-03-10 15:10:33,078 | INFO     | WalkForward | Fold 4: FAIL | Sortino=0.000 | MaxDD=2.94% | Trades=12
+2026-03-10 15:10:33,079 | INFO     | WalkForward | Processing fold 5/56
+2026-03-10 15:10:34,881 | INFO     | H4BiasModel | H4BiasModel trained for EURUSD on 2191 samples, 14 features
+2026-03-10 15:10:39,918 | INFO     | M15EntryModel | M15EntryModel trained for EURUSD | long hit rate: 8.62% | short hit rate: 0.00% | samples: 35041 | features: 37
+2026-03-10 15:14:17,465 | INFO     | WalkForward | Fold 5: FAIL | Sortino=0.000 | MaxDD=2.94% | Trades=3
+2026-03-10 15:14:17,465 | INFO     | WalkForward | Processing fold 6/56
+2026-03-10 15:14:19,834 | INFO     | H4BiasModel | H4BiasModel trained for EURUSD on 2197 samples, 14 features
+2026-03-10 15:14:24,163 | INFO     | M15EntryModel | M15EntryModel trained for EURUSD | long hit rate: 8.82% | short hit rate: 0.00% | samples: 35137 | features: 37
+2026-03-10 15:17:51,352 | INFO     | WalkForward | Fold 6: FAIL | Sortino=500000.000 | MaxDD=2.94% | Trades=2
+2026-03-10 15:17:51,352 | INFO     | WalkForward | Processing fold 7/56
+2026-03-10 15:17:53,609 | INFO     | H4BiasModel | H4BiasModel trained for EURUSD on 2197 samples, 14 features
+2026-03-10 15:17:58,000 | INFO     | M15EntryModel | M15EntryModel trained for EURUSD | long hit rate: 9.05% | short hit rate: 0.00% | samples: 35137 | features: 37
+2026-03-10 15:21:26,384 | INFO     | WalkForward | Fold 7: FAIL | Sortino=0.000 | MaxDD=2.94% | Trades=10
+2026-03-10 15:21:26,385 | INFO     | WalkForward | Processing fold 8/56
+2026-03-10 15:21:28,640 | INFO     | H4BiasModel | H4BiasModel trained for EURUSD on 2197 samples, 14 features
+2026-03-10 15:21:33,314 | INFO     | M15EntryModel | M15EntryModel trained for EURUSD | long hit rate: 9.54% | short hit rate: 0.00% | samples: 35137 | features: 37
+2026-03-10 15:24:57,984 | INFO     | WalkForward | Fold 8: FAIL | Sortino=0.000 | MaxDD=2.94% | Trades=13
+2026-03-10 15:24:57,985 | INFO     | WalkForward | Processing fold 9/56
+2026-03-10 15:25:00,453 | INFO     | H4BiasModel | H4BiasModel trained for EURUSD on 2197 samples, 14 features
+2026-03-10 15:25:06,227 | INFO     | M15EntryModel | M15EntryModel trained for EURUSD | long hit rate: 9.36% | short hit rate: 0.00% | samples: 35137 | features: 37
+2026-03-10 15:28:42,584 | INFO     | WalkForward | Fold 9: FAIL | Sortino=0.000 | MaxDD=2.94% | Trades=9
+2026-03-10 15:28:42,585 | INFO     | WalkForward | Processing fold 10/56
+2026-03-10 15:28:45,612 | INFO     | H4BiasModel | H4BiasModel trained for EURUSD on 2191 samples, 14 features
+2026-03-10 15:28:51,619 | INFO     | M15EntryModel | M15EntryModel trained for EURUSD | long hit rate: 9.15% | short hit rate: 0.00% | samples: 35041 | features: 37
+2026-03-10 15:32:17,193 | INFO     | WalkForward | Fold 10: FAIL | Sortino=1928571.429 | MaxDD=2.94% | Trades=7
+2026-03-10 15:32:17,194 | INFO     | WalkForward | Processing fold 11/56
+2026-03-10 15:32:19,640 | INFO     | H4BiasModel | H4BiasModel trained for EURUSD on 2191 samples, 14 features
+2026-03-10 15:32:24,476 | INFO     | M15EntryModel | M15EntryModel trained for EURUSD | long hit rate: 9.69% | short hit rate: 0.00% | samples: 35041 | features: 37
+2026-03-10 15:35:51,654 | INFO     | WalkForward | Fold 11: FAIL | Sortino=0.000 | MaxDD=2.94% | Trades=5
+2026-03-10 15:35:51,654 | INFO     | WalkForward | Processing fold 12/56
+2026-03-10 15:35:54,357 | INFO     | H4BiasModel | H4BiasModel trained for EURUSD on 2191 samples, 14 features
+2026-03-10 15:35:59,617 | INFO     | M15EntryModel | M15EntryModel trained for EURUSD | long hit rate: 9.35% | short hit rate: 0.00% | samples: 35041 | features: 37
+2026-03-10 15:39:19,963 | INFO     | WalkForward | Fold 12: FAIL | Sortino=0.000 | MaxDD=2.94% | Trades=11
+2026-03-10 15:39:19,964 | INFO     | WalkForward | Processing fold 13/56
+2026-03-10 15:39:22,812 | INFO     | H4BiasModel | H4BiasModel trained for EURUSD on 2191 samples, 14 features
+2026-03-10 15:39:28,664 | INFO     | M15EntryModel | M15EntryModel trained for EURUSD | long hit rate: 10.20% | short hit rate: 0.00% | samples: 35041 | features: 37
+2026-03-10 15:44:02,923 | INFO     | DataEngine | EURUSD H4 history: 16.0 years — OK
+2026-03-10 15:44:02,924 | INFO     | DataEngine | GBPUSD H4 history: 16.0 years — OK
+2026-03-10 15:44:02,924 | INFO     | TrainScript | 
+==================================================
+2026-03-10 15:44:02,924 | INFO     | TrainScript |   TRAINING: EURUSD
+2026-03-10 15:44:02,924 | INFO     | TrainScript | ==================================================
+2026-03-10 15:44:02,929 | INFO     | TrainScript | Running QMRP walk-forward optimisation...
+2026-03-10 15:44:02,929 | INFO     | WalkForward | QMRP started for EURUSD
+2026-03-10 15:44:02,930 | INFO     | WalkForward | Generated 56 walk-forward folds
+2026-03-10 15:44:02,930 | INFO     | WalkForward | Processing fold 1/56
+2026-03-10 15:44:05,407 | INFO     | H4BiasModel | H4BiasModel trained for EURUSD on 2039 samples, 14 features
+2026-03-10 15:44:09,388 | INFO     | M15EntryModel | M15EntryModel trained for EURUSD | long hit rate: 27.69% | short hit rate: 29.60% | samples: 34753 | features: 37
+2026-03-10 15:45:23,568 | INFO     | WalkForward | Fold 1: FAIL | Sortino=0.000 | MaxDD=2.94% | Trades=733
+2026-03-10 15:45:23,568 | INFO     | WalkForward | Processing fold 2/56
+2026-03-10 15:45:24,905 | INFO     | H4BiasModel | H4BiasModel trained for EURUSD on 2191 samples, 14 features
+2026-03-10 15:45:29,281 | INFO     | M15EntryModel | M15EntryModel trained for EURUSD | long hit rate: 28.30% | short hit rate: 29.04% | samples: 35041 | features: 37
+2026-03-10 15:46:36,009 | INFO     | WalkForward | Fold 2: FAIL | Sortino=0.000 | MaxDD=2.94% | Trades=677
+2026-03-10 15:46:36,009 | INFO     | WalkForward | Processing fold 3/56
+2026-03-10 15:46:37,315 | INFO     | H4BiasModel | H4BiasModel trained for EURUSD on 2191 samples, 14 features
+2026-03-10 15:46:42,614 | INFO     | M15EntryModel | M15EntryModel trained for EURUSD | long hit rate: 29.54% | short hit rate: 28.32% | samples: 35041 | features: 37
+2026-03-10 15:48:03,352 | INFO     | WalkForward | Fold 3: FAIL | Sortino=0.000 | MaxDD=2.94% | Trades=709
+2026-03-10 15:48:03,352 | INFO     | WalkForward | Processing fold 4/56
+2026-03-10 15:48:04,440 | INFO     | H4BiasModel | H4BiasModel trained for EURUSD on 2191 samples, 14 features
+2026-03-10 15:48:09,154 | INFO     | M15EntryModel | M15EntryModel trained for EURUSD | long hit rate: 29.23% | short hit rate: 29.73% | samples: 35041 | features: 37
+2026-03-10 15:49:19,722 | INFO     | WalkForward | Fold 4: FAIL | Sortino=0.000 | MaxDD=2.94% | Trades=756
+2026-03-10 15:49:19,722 | INFO     | WalkForward | Processing fold 5/56
+2026-03-10 15:49:20,786 | INFO     | H4BiasModel | H4BiasModel trained for EURUSD on 2191 samples, 14 features
+2026-03-10 15:49:25,373 | INFO     | M15EntryModel | M15EntryModel trained for EURUSD | long hit rate: 28.00% | short hit rate: 29.99% | samples: 35041 | features: 37
+2026-03-10 15:50:38,043 | INFO     | WalkForward | Fold 5: FAIL | Sortino=0.000 | MaxDD=2.94% | Trades=734
+2026-03-10 15:50:38,044 | INFO     | WalkForward | Processing fold 6/56
+2026-03-10 15:50:39,508 | INFO     | H4BiasModel | H4BiasModel trained for EURUSD on 2197 samples, 14 features
+2026-03-10 15:50:45,613 | INFO     | M15EntryModel | M15EntryModel trained for EURUSD | long hit rate: 28.36% | short hit rate: 30.09% | samples: 35137 | features: 37
+2026-03-10 15:52:00,357 | INFO     | WalkForward | Fold 6: FAIL | Sortino=0.000 | MaxDD=2.94% | Trades=769
+2026-03-10 15:52:00,357 | INFO     | WalkForward | Processing fold 7/56
+2026-03-10 15:52:02,374 | INFO     | H4BiasModel | H4BiasModel trained for EURUSD on 2197 samples, 14 features
+2026-03-10 15:52:09,425 | INFO     | M15EntryModel | M15EntryModel trained for EURUSD | long hit rate: 27.71% | short hit rate: 30.32% | samples: 35137 | features: 37
+2026-03-10 15:53:25,276 | INFO     | WalkForward | Fold 7: FAIL | Sortino=0.000 | MaxDD=2.94% | Trades=668
+2026-03-10 15:53:25,277 | INFO     | WalkForward | Processing fold 8/56
+2026-03-10 15:53:27,518 | INFO     | H4BiasModel | H4BiasModel trained for EURUSD on 2197 samples, 14 features
+2026-03-10 15:53:35,213 | INFO     | M15EntryModel | M15EntryModel trained for EURUSD | long hit rate: 28.90% | short hit rate: 29.37% | samples: 35137 | features: 37
+2026-03-10 15:54:38,776 | INFO     | WalkForward | Fold 8: FAIL | Sortino=0.000 | MaxDD=2.94% | Trades=667
+2026-03-10 15:54:38,777 | INFO     | WalkForward | Processing fold 9/56
+2026-03-10 15:54:41,147 | INFO     | H4BiasModel | H4BiasModel trained for EURUSD on 2197 samples, 14 features
+2026-03-10 15:54:47,668 | INFO     | M15EntryModel | M15EntryModel trained for EURUSD | long hit rate: 29.13% | short hit rate: 28.71% | samples: 35137 | features: 37
+2026-03-10 15:55:53,319 | INFO     | WalkForward | Fold 9: FAIL | Sortino=0.000 | MaxDD=2.94% | Trades=666
+2026-03-10 15:55:53,319 | INFO     | WalkForward | Processing fold 10/56
+2026-03-10 15:55:55,561 | INFO     | H4BiasModel | H4BiasModel trained for EURUSD on 2191 samples, 14 features
+2026-03-10 15:56:03,031 | INFO     | M15EntryModel | M15EntryModel trained for EURUSD | long hit rate: 28.58% | short hit rate: 28.13% | samples: 35041 | features: 37
+2026-03-10 15:57:15,726 | INFO     | WalkForward | Fold 10: FAIL | Sortino=0.000 | MaxDD=2.94% | Trades=676
+2026-03-10 15:57:15,727 | INFO     | WalkForward | Processing fold 11/56
+2026-03-10 15:57:18,259 | INFO     | H4BiasModel | H4BiasModel trained for EURUSD on 2191 samples, 14 features
+2026-03-10 15:57:25,870 | INFO     | M15EntryModel | M15EntryModel trained for EURUSD | long hit rate: 28.85% | short hit rate: 26.85% | samples: 35041 | features: 37
+2026-03-10 15:58:43,292 | INFO     | WalkForward | Fold 11: FAIL | Sortino=0.000 | MaxDD=2.94% | Trades=605
+2026-03-10 15:58:43,292 | INFO     | WalkForward | Processing fold 12/56
+2026-03-10 15:58:45,967 | INFO     | H4BiasModel | H4BiasModel trained for EURUSD on 2191 samples, 14 features
+2026-03-10 15:58:53,182 | INFO     | M15EntryModel | M15EntryModel trained for EURUSD | long hit rate: 27.44% | short hit rate: 27.10% | samples: 35041 | features: 37
+2026-03-10 16:00:05,931 | INFO     | WalkForward | Fold 12: FAIL | Sortino=0.000 | MaxDD=2.94% | Trades=641
+2026-03-10 16:00:05,931 | INFO     | WalkForward | Processing fold 13/56
+2026-03-10 16:00:08,574 | INFO     | H4BiasModel | H4BiasModel trained for EURUSD on 2191 samples, 14 features
+2026-03-10 16:00:16,068 | INFO     | M15EntryModel | M15EntryModel trained for EURUSD | long hit rate: 28.10% | short hit rate: 26.99% | samples: 35041 | features: 37
+2026-03-10 16:01:44,332 | INFO     | WalkForward | Fold 13: FAIL | Sortino=0.000 | MaxDD=2.94% | Trades=694
+2026-03-10 16:01:44,332 | INFO     | WalkForward | Processing fold 14/56
+2026-03-10 16:01:47,231 | INFO     | H4BiasModel | H4BiasModel trained for EURUSD on 2191 samples, 14 features
+2026-03-10 16:01:54,521 | INFO     | M15EntryModel | M15EntryModel trained for EURUSD | long hit rate: 27.50% | short hit rate: 26.79% | samples: 35041 | features: 37
+2026-03-10 16:03:14,520 | INFO     | WalkForward | Fold 14: FAIL | Sortino=0.000 | MaxDD=2.94% | Trades=667
+2026-03-10 16:03:14,521 | INFO     | WalkForward | Processing fold 15/56
+2026-03-10 16:03:17,383 | INFO     | H4BiasModel | H4BiasModel trained for EURUSD on 2191 samples, 14 features
+2026-03-10 16:03:25,820 | INFO     | M15EntryModel | M15EntryModel trained for EURUSD | long hit rate: 28.27% | short hit rate: 26.57% | samples: 35041 | features: 37
+2026-03-10 16:05:18,766 | INFO     | WalkForward | Fold 15: FAIL | Sortino=0.000 | MaxDD=2.94% | Trades=654
+2026-03-10 16:05:18,767 | INFO     | WalkForward | Processing fold 16/56
+2026-03-10 16:05:21,272 | INFO     | H4BiasModel | H4BiasModel trained for EURUSD on 2191 samples, 14 features
+2026-03-10 16:05:31,910 | INFO     | M15EntryModel | M15EntryModel trained for EURUSD | long hit rate: 27.78% | short hit rate: 26.53% | samples: 35041 | features: 37
+2026-03-10 16:08:41,458 | INFO     | DataEngine | EURUSD H4 history: 16.0 years — OK
+2026-03-10 16:08:41,458 | INFO     | DataEngine | GBPUSD H4 history: 16.0 years — OK
+2026-03-10 16:08:41,458 | INFO     | TrainScript | 
+==================================================
+2026-03-10 16:08:41,459 | INFO     | TrainScript |   TRAINING: EURUSD
+2026-03-10 16:08:41,459 | INFO     | TrainScript | ==================================================
+2026-03-10 16:08:41,464 | INFO     | TrainScript | Running QMRP walk-forward optimisation...
+2026-03-10 16:08:41,464 | INFO     | WalkForward | QMRP started for EURUSD
+2026-03-10 16:08:41,465 | INFO     | WalkForward | Generated 56 walk-forward folds
+2026-03-10 16:08:41,465 | INFO     | WalkForward | Processing fold 1/56
+2026-03-10 16:08:43,850 | INFO     | H4BiasModel | H4BiasModel trained for EURUSD on 2039 samples, 14 features
+2026-03-10 16:08:47,908 | INFO     | M15EntryModel | M15EntryModel trained for EURUSD | long hit rate: 27.69% | short hit rate: 29.60% | samples: 34753 | features: 37
+2026-03-10 16:10:02,882 | INFO     | WalkForward | Fold 1: FAIL | Sortino=0.000 | MaxDD=20.45% | Trades=733
+2026-03-10 16:10:02,882 | INFO     | WalkForward | Processing fold 2/56
+2026-03-10 16:10:04,237 | INFO     | H4BiasModel | H4BiasModel trained for EURUSD on 2191 samples, 14 features
+2026-03-10 16:10:10,310 | INFO     | M15EntryModel | M15EntryModel trained for EURUSD | long hit rate: 28.30% | short hit rate: 29.04% | samples: 35041 | features: 37
+2026-03-10 16:11:18,588 | INFO     | WalkForward | Fold 2: FAIL | Sortino=0.000 | MaxDD=100.00% | Trades=677
+2026-03-10 16:11:18,589 | INFO     | WalkForward | Processing fold 3/56
+2026-03-10 16:11:19,548 | INFO     | H4BiasModel | H4BiasModel trained for EURUSD on 2191 samples, 14 features
+2026-03-10 16:11:24,855 | INFO     | M15EntryModel | M15EntryModel trained for EURUSD | long hit rate: 29.54% | short hit rate: 28.32% | samples: 35041 | features: 37
+2026-03-10 16:12:46,848 | INFO     | WalkForward | Fold 3: FAIL | Sortino=0.000 | MaxDD=30.00% | Trades=709
+2026-03-10 16:12:46,848 | INFO     | WalkForward | Processing fold 4/56
+2026-03-10 16:12:47,940 | INFO     | H4BiasModel | H4BiasModel trained for EURUSD on 2191 samples, 14 features
+2026-03-10 16:12:52,599 | INFO     | M15EntryModel | M15EntryModel trained for EURUSD | long hit rate: 29.23% | short hit rate: 29.73% | samples: 35041 | features: 37
+2026-03-10 16:14:09,904 | INFO     | WalkForward | Fold 4: FAIL | Sortino=0.000 | MaxDD=30.00% | Trades=756
+2026-03-10 16:14:09,905 | INFO     | WalkForward | Processing fold 5/56
+2026-03-10 16:14:11,521 | INFO     | H4BiasModel | H4BiasModel trained for EURUSD on 2191 samples, 14 features
+2026-03-10 16:14:17,897 | INFO     | M15EntryModel | M15EntryModel trained for EURUSD | long hit rate: 28.00% | short hit rate: 29.99% | samples: 35041 | features: 37
+2026-03-10 16:15:36,610 | INFO     | WalkForward | Fold 5: FAIL | Sortino=0.000 | MaxDD=100.00% | Trades=734
+2026-03-10 16:15:36,611 | INFO     | WalkForward | Processing fold 6/56
+2026-03-10 16:15:38,505 | INFO     | H4BiasModel | H4BiasModel trained for EURUSD on 2197 samples, 14 features
+2026-03-10 16:15:44,973 | INFO     | M15EntryModel | M15EntryModel trained for EURUSD | long hit rate: 28.36% | short hit rate: 30.09% | samples: 35137 | features: 37
+2026-03-10 16:16:55,898 | INFO     | WalkForward | Fold 6: FAIL | Sortino=0.000 | MaxDD=100.00% | Trades=769
+2026-03-10 16:16:55,898 | INFO     | WalkForward | Processing fold 7/56
+2026-03-10 16:16:57,612 | INFO     | H4BiasModel | H4BiasModel trained for EURUSD on 2197 samples, 14 features
+2026-03-10 16:17:04,050 | INFO     | M15EntryModel | M15EntryModel trained for EURUSD | long hit rate: 27.71% | short hit rate: 30.32% | samples: 35137 | features: 37
+2026-03-10 16:18:14,488 | INFO     | WalkForward | Fold 7: FAIL | Sortino=0.000 | MaxDD=34.62% | Trades=668
+2026-03-10 16:18:14,488 | INFO     | WalkForward | Processing fold 8/56
+2026-03-10 16:18:16,437 | INFO     | H4BiasModel | H4BiasModel trained for EURUSD on 2197 samples, 14 features
+2026-03-10 16:18:23,445 | INFO     | M15EntryModel | M15EntryModel trained for EURUSD | long hit rate: 28.90% | short hit rate: 29.37% | samples: 35137 | features: 37
+2026-03-10 16:19:27,483 | INFO     | WalkForward | Fold 8: FAIL | Sortino=0.000 | MaxDD=85.71% | Trades=667
+2026-03-10 16:19:27,483 | INFO     | WalkForward | Processing fold 9/56
+2026-03-10 16:19:29,514 | INFO     | H4BiasModel | H4BiasModel trained for EURUSD on 2197 samples, 14 features
+2026-03-10 16:19:36,110 | INFO     | M15EntryModel | M15EntryModel trained for EURUSD | long hit rate: 29.13% | short hit rate: 28.71% | samples: 35137 | features: 37
+2026-03-10 16:20:45,285 | INFO     | WalkForward | Fold 9: FAIL | Sortino=0.000 | MaxDD=100.00% | Trades=666
+2026-03-10 16:20:45,286 | INFO     | WalkForward | Processing fold 10/56
+2026-03-10 16:20:47,621 | INFO     | H4BiasModel | H4BiasModel trained for EURUSD on 2191 samples, 14 features
+2026-03-10 16:20:55,022 | INFO     | M15EntryModel | M15EntryModel trained for EURUSD | long hit rate: 28.58% | short hit rate: 28.13% | samples: 35041 | features: 37
+2026-03-10 16:22:04,734 | INFO     | WalkForward | Fold 10: FAIL | Sortino=0.000 | MaxDD=100.00% | Trades=676
+2026-03-10 16:22:04,734 | INFO     | WalkForward | Processing fold 11/56
+2026-03-10 16:22:06,839 | INFO     | H4BiasModel | H4BiasModel trained for EURUSD on 2191 samples, 14 features
+2026-03-10 16:22:14,120 | INFO     | M15EntryModel | M15EntryModel trained for EURUSD | long hit rate: 28.85% | short hit rate: 26.85% | samples: 35041 | features: 37
+2026-03-10 16:23:33,085 | INFO     | WalkForward | Fold 11: FAIL | Sortino=0.000 | MaxDD=80.00% | Trades=605
+2026-03-10 16:23:33,086 | INFO     | WalkForward | Processing fold 12/56
+2026-03-10 16:23:36,258 | INFO     | H4BiasModel | H4BiasModel trained for EURUSD on 2191 samples, 14 features
+2026-03-10 16:23:43,755 | INFO     | M15EntryModel | M15EntryModel trained for EURUSD | long hit rate: 27.44% | short hit rate: 27.10% | samples: 35041 | features: 37
+2026-03-10 16:24:55,941 | INFO     | WalkForward | Fold 12: FAIL | Sortino=0.000 | MaxDD=100.00% | Trades=641
+2026-03-10 16:24:55,941 | INFO     | WalkForward | Processing fold 13/56
+2026-03-10 16:24:58,877 | INFO     | H4BiasModel | H4BiasModel trained for EURUSD on 2191 samples, 14 features
+2026-03-10 16:25:07,721 | INFO     | M15EntryModel | M15EntryModel trained for EURUSD | long hit rate: 28.10% | short hit rate: 26.99% | samples: 35041 | features: 37
+2026-03-10 16:26:40,643 | INFO     | WalkForward | Fold 13: FAIL | Sortino=0.000 | MaxDD=100.00% | Trades=694
+2026-03-10 16:26:40,644 | INFO     | WalkForward | Processing fold 14/56
+2026-03-10 16:31:05,890 | INFO     | H4BiasModel | H4BiasModel trained for EURUSD on 2191 samples, 14 features
+2026-03-10 17:45:52,351 | INFO     | M15EntryModel | M15EntryModel trained for EURUSD | long hit rate: 27.50% | short hit rate: 26.79% | samples: 35041 | features: 37
+2026-03-10 17:47:25,144 | INFO     | WalkForward | Fold 14: FAIL | Sortino=0.000 | MaxDD=50.00% | Trades=667
+2026-03-10 17:47:25,145 | INFO     | WalkForward | Processing fold 15/56
+2026-03-10 17:47:28,422 | INFO     | H4BiasModel | H4BiasModel trained for EURUSD on 2191 samples, 14 features
+2026-03-10 17:47:38,225 | INFO     | M15EntryModel | M15EntryModel trained for EURUSD | long hit rate: 28.27% | short hit rate: 26.57% | samples: 35041 | features: 37
+2026-03-10 17:49:17,635 | INFO     | WalkForward | Fold 15: FAIL | Sortino=0.000 | MaxDD=100.00% | Trades=654
+2026-03-10 17:49:17,635 | INFO     | WalkForward | Processing fold 16/56
+2026-03-10 17:49:20,662 | INFO     | H4BiasModel | H4BiasModel trained for EURUSD on 2191 samples, 14 features
+2026-03-10 17:49:28,893 | INFO     | M15EntryModel | M15EntryModel trained for EURUSD | long hit rate: 27.78% | short hit rate: 26.53% | samples: 35041 | features: 37
+2026-03-10 17:50:57,008 | INFO     | WalkForward | Fold 16: FAIL | Sortino=0.000 | MaxDD=100.00% | Trades=700
+2026-03-10 17:50:57,009 | INFO     | WalkForward | Processing fold 17/56
+2026-03-10 17:51:00,019 | INFO     | H4BiasModel | H4BiasModel trained for EURUSD on 2191 samples, 14 features
+2026-03-10 17:51:09,041 | INFO     | M15EntryModel | M15EntryModel trained for EURUSD | long hit rate: 26.72% | short hit rate: 27.19% | samples: 35041 | features: 37
+2026-03-10 17:52:39,840 | INFO     | WalkForward | Fold 17: FAIL | Sortino=0.000 | MaxDD=17.65% | Trades=655
+2026-03-10 17:52:39,840 | INFO     | WalkForward | Processing fold 18/56
+2026-03-10 17:52:42,707 | INFO     | H4BiasModel | H4BiasModel trained for EURUSD on 2191 samples, 14 features
+2026-03-10 17:52:50,941 | INFO     | M15EntryModel | M15EntryModel trained for EURUSD | long hit rate: 26.74% | short hit rate: 28.75% | samples: 35041 | features: 37
+2026-03-10 17:54:19,059 | INFO     | WalkForward | Fold 18: FAIL | Sortino=0.000 | MaxDD=100.00% | Trades=661
+2026-03-10 17:54:19,060 | INFO     | WalkForward | Processing fold 19/56
+2026-03-10 17:54:22,556 | INFO     | H4BiasModel | H4BiasModel trained for EURUSD on 2191 samples, 14 features
+2026-03-10 17:54:30,384 | INFO     | M15EntryModel | M15EntryModel trained for EURUSD | long hit rate: 26.09% | short hit rate: 29.25% | samples: 35041 | features: 37
+2026-03-10 17:55:44,294 | INFO     | WalkForward | Fold 19: FAIL | Sortino=0.000 | MaxDD=100.00% | Trades=710
+2026-03-10 17:55:44,295 | INFO     | WalkForward | Processing fold 20/56
+2026-03-10 17:55:48,137 | INFO     | H4BiasModel | H4BiasModel trained for EURUSD on 2191 samples, 14 features
+2026-03-10 17:55:57,004 | INFO     | M15EntryModel | M15EntryModel trained for EURUSD | long hit rate: 27.37% | short hit rate: 29.22% | samples: 35041 | features: 37
+2026-03-10 17:57:10,598 | INFO     | WalkForward | Fold 20: FAIL | Sortino=0.000 | MaxDD=85.71% | Trades=641
+2026-03-10 17:57:10,599 | INFO     | WalkForward | Processing fold 21/56
+2026-03-10 17:57:14,513 | INFO     | H4BiasModel | H4BiasModel trained for EURUSD on 2191 samples, 14 features
+2026-03-10 17:57:23,757 | INFO     | M15EntryModel | M15EntryModel trained for EURUSD | long hit rate: 28.06% | short hit rate: 29.16% | samples: 35041 | features: 37
+2026-03-10 17:58:49,821 | INFO     | WalkForward | Fold 21: FAIL | Sortino=0.000 | MaxDD=100.00% | Trades=691
+2026-03-10 17:58:49,821 | INFO     | WalkForward | Processing fold 22/56
+2026-03-10 17:58:53,516 | INFO     | H4BiasModel | H4BiasModel trained for EURUSD on 2197 samples, 14 features
+2026-03-10 17:59:03,135 | INFO     | M15EntryModel | M15EntryModel trained for EURUSD | long hit rate: 27.92% | short hit rate: 28.76% | samples: 35137 | features: 37
+2026-03-10 18:00:14,571 | INFO     | WalkForward | Fold 22: FAIL | Sortino=0.000 | MaxDD=22.22% | Trades=742
+2026-03-10 18:00:14,572 | INFO     | WalkForward | Processing fold 23/56
+2026-03-10 18:00:18,519 | INFO     | H4BiasModel | H4BiasModel trained for EURUSD on 2197 samples, 14 features
+2026-03-10 18:00:28,366 | INFO     | M15EntryModel | M15EntryModel trained for EURUSD | long hit rate: 28.28% | short hit rate: 28.37% | samples: 35137 | features: 37
+2026-03-10 18:01:48,472 | INFO     | WalkForward | Fold 23: FAIL | Sortino=0.000 | MaxDD=50.00% | Trades=741
+2026-03-10 18:01:48,472 | INFO     | WalkForward | Processing fold 24/56
+2026-03-10 18:01:52,897 | INFO     | H4BiasModel | H4BiasModel trained for EURUSD on 2197 samples, 14 features
+2026-03-10 18:02:03,374 | INFO     | M15EntryModel | M15EntryModel trained for EURUSD | long hit rate: 27.92% | short hit rate: 27.33% | samples: 35137 | features: 37
+2026-03-10 18:03:21,733 | INFO     | WalkForward | Fold 24: FAIL | Sortino=0.000 | MaxDD=100.00% | Trades=703
+2026-03-10 18:03:21,734 | INFO     | WalkForward | Processing fold 25/56
+2026-03-10 18:03:26,540 | INFO     | H4BiasModel | H4BiasModel trained for EURUSD on 2197 samples, 14 features
+2026-03-10 18:03:37,445 | INFO     | M15EntryModel | M15EntryModel trained for EURUSD | long hit rate: 27.41% | short hit rate: 27.76% | samples: 35137 | features: 37
+2026-03-10 18:04:52,148 | INFO     | WalkForward | Fold 25: FAIL | Sortino=0.000 | MaxDD=15.38% | Trades=705
+2026-03-10 18:04:52,148 | INFO     | WalkForward | Processing fold 26/56
+2026-03-10 18:04:56,767 | INFO     | H4BiasModel | H4BiasModel trained for EURUSD on 2191 samples, 14 features
+2026-03-10 18:05:07,528 | INFO     | M15EntryModel | M15EntryModel trained for EURUSD | long hit rate: 27.98% | short hit rate: 27.21% | samples: 35041 | features: 37
+2026-03-10 18:06:25,503 | INFO     | WalkForward | Fold 26: FAIL | Sortino=0.000 | MaxDD=36.00% | Trades=751
+2026-03-10 18:06:25,504 | INFO     | WalkForward | Processing fold 27/56
+2026-03-10 18:06:30,291 | INFO     | H4BiasModel | H4BiasModel trained for EURUSD on 2191 samples, 14 features
+2026-03-10 18:06:41,361 | INFO     | M15EntryModel | M15EntryModel trained for EURUSD | long hit rate: 28.26% | short hit rate: 26.67% | samples: 35041 | features: 37
+2026-03-10 18:08:03,408 | INFO     | WalkForward | Fold 27: FAIL | Sortino=0.000 | MaxDD=25.00% | Trades=727
+2026-03-10 18:08:03,408 | INFO     | WalkForward | Processing fold 28/56
+2026-03-10 18:08:08,125 | INFO     | H4BiasModel | H4BiasModel trained for EURUSD on 2191 samples, 14 features
+2026-03-10 18:08:19,327 | INFO     | M15EntryModel | M15EntryModel trained for EURUSD | long hit rate: 28.18% | short hit rate: 27.02% | samples: 35041 | features: 37
+2026-03-10 18:09:34,460 | INFO     | WalkForward | Fold 28: FAIL | Sortino=0.000 | MaxDD=60.00% | Trades=772
+2026-03-10 18:09:34,460 | INFO     | WalkForward | Processing fold 29/56
+2026-03-10 18:09:39,231 | INFO     | H4BiasModel | H4BiasModel trained for EURUSD on 2191 samples, 14 features
+2026-03-10 18:09:49,647 | INFO     | M15EntryModel | M15EntryModel trained for EURUSD | long hit rate: 28.33% | short hit rate: 26.68% | samples: 35041 | features: 37
+2026-03-10 18:11:12,520 | INFO     | WalkForward | Fold 29: FAIL | Sortino=0.000 | MaxDD=30.00% | Trades=731
+2026-03-10 18:11:12,521 | INFO     | WalkForward | Processing fold 30/56
+2026-03-10 18:11:17,485 | INFO     | H4BiasModel | H4BiasModel trained for EURUSD on 2191 samples, 14 features
+2026-03-10 18:11:28,372 | INFO     | M15EntryModel | M15EntryModel trained for EURUSD | long hit rate: 28.47% | short hit rate: 26.01% | samples: 35041 | features: 37
+2026-03-10 18:12:45,647 | INFO     | WalkForward | Fold 30: FAIL | Sortino=0.000 | MaxDD=30.00% | Trades=711
+2026-03-10 18:12:45,648 | INFO     | WalkForward | Processing fold 31/56
+2026-03-10 18:12:51,000 | INFO     | H4BiasModel | H4BiasModel trained for EURUSD on 2191 samples, 14 features
+2026-03-10 18:13:04,079 | INFO     | M15EntryModel | M15EntryModel trained for EURUSD | long hit rate: 27.15% | short hit rate: 27.16% | samples: 35041 | features: 37
+2026-03-10 18:14:21,145 | INFO     | WalkForward | Fold 31: FAIL | Sortino=0.000 | MaxDD=100.00% | Trades=724
+2026-03-10 18:14:21,146 | INFO     | WalkForward | Processing fold 32/56
+2026-03-10 18:14:26,483 | INFO     | H4BiasModel | H4BiasModel trained for EURUSD on 2191 samples, 14 features
+2026-03-10 18:14:37,906 | INFO     | M15EntryModel | M15EntryModel trained for EURUSD | long hit rate: 27.24% | short hit rate: 26.75% | samples: 35041 | features: 37
+2026-03-10 18:15:46,189 | INFO     | WalkForward | Fold 32: FAIL | Sortino=0.000 | MaxDD=31.03% | Trades=732
+2026-03-10 18:15:46,189 | INFO     | WalkForward | Processing fold 33/56
+2026-03-10 18:15:51,713 | INFO     | H4BiasModel | H4BiasModel trained for EURUSD on 2191 samples, 14 features
+2026-03-10 18:16:04,923 | INFO     | M15EntryModel | M15EntryModel trained for EURUSD | long hit rate: 27.58% | short hit rate: 26.95% | samples: 35041 | features: 37
+2026-03-10 18:17:23,595 | INFO     | WalkForward | Fold 33: FAIL | Sortino=0.000 | MaxDD=100.00% | Trades=682
+2026-03-10 18:17:23,595 | INFO     | WalkForward | Processing fold 34/56
+2026-03-10 18:17:29,354 | INFO     | H4BiasModel | H4BiasModel trained for EURUSD on 2191 samples, 14 features
+2026-03-10 18:17:41,919 | INFO     | M15EntryModel | M15EntryModel trained for EURUSD | long hit rate: 26.69% | short hit rate: 27.31% | samples: 35041 | features: 37
+2026-03-10 18:19:05,705 | INFO     | WalkForward | Fold 34: FAIL | Sortino=0.000 | MaxDD=100.00% | Trades=725
+2026-03-10 18:19:05,705 | INFO     | WalkForward | Processing fold 35/56
+2026-03-10 18:19:11,294 | INFO     | H4BiasModel | H4BiasModel trained for EURUSD on 2191 samples, 14 features
+2026-03-10 18:19:24,906 | INFO     | M15EntryModel | M15EntryModel trained for EURUSD | long hit rate: 27.71% | short hit rate: 26.66% | samples: 35041 | features: 37
+2026-03-10 18:20:43,393 | INFO     | WalkForward | Fold 35: FAIL | Sortino=0.000 | MaxDD=100.00% | Trades=730
+2026-03-10 18:20:43,394 | INFO     | WalkForward | Processing fold 36/56
+2026-03-10 18:20:49,374 | INFO     | H4BiasModel | H4BiasModel trained for EURUSD on 2191 samples, 14 features
+2026-03-10 18:21:02,352 | INFO     | M15EntryModel | M15EntryModel trained for EURUSD | long hit rate: 26.95% | short hit rate: 27.32% | samples: 35041 | features: 37
+2026-03-10 18:22:16,097 | INFO     | WalkForward | Fold 36: FAIL | Sortino=0.000 | MaxDD=13.64% | Trades=744
+2026-03-10 18:22:16,097 | INFO     | WalkForward | Processing fold 37/56
+2026-03-10 18:22:22,205 | INFO     | H4BiasModel | H4BiasModel trained for EURUSD on 2191 samples, 14 features
+2026-03-10 18:22:35,522 | INFO     | M15EntryModel | M15EntryModel trained for EURUSD | long hit rate: 27.51% | short hit rate: 26.47% | samples: 35041 | features: 37
+2026-03-10 18:24:02,942 | INFO     | WalkForward | Fold 37: FAIL | Sortino=0.000 | MaxDD=44.44% | Trades=752
+2026-03-10 18:24:02,942 | INFO     | WalkForward | Processing fold 38/56
+2026-03-10 18:24:08,772 | INFO     | H4BiasModel | H4BiasModel trained for EURUSD on 2197 samples, 14 features
+2026-03-10 18:24:21,478 | INFO     | M15EntryModel | M15EntryModel trained for EURUSD | long hit rate: 28.20% | short hit rate: 26.87% | samples: 35137 | features: 37
+2026-03-10 18:25:46,018 | INFO     | WalkForward | Fold 38: FAIL | Sortino=0.000 | MaxDD=100.00% | Trades=776
+2026-03-10 18:25:46,019 | INFO     | WalkForward | Processing fold 39/56
+2026-03-10 18:25:53,265 | INFO     | H4BiasModel | H4BiasModel trained for EURUSD on 2197 samples, 14 features
+2026-03-10 18:26:07,468 | INFO     | M15EntryModel | M15EntryModel trained for EURUSD | long hit rate: 28.36% | short hit rate: 27.08% | samples: 35137 | features: 37
+2026-03-10 18:27:24,976 | INFO     | WalkForward | Fold 39: FAIL | Sortino=0.000 | MaxDD=60.00% | Trades=761
+2026-03-10 18:27:24,976 | INFO     | WalkForward | Processing fold 40/56
+2026-03-10 18:27:29,850 | INFO     | H4BiasModel | H4BiasModel trained for EURUSD on 2197 samples, 14 features
+2026-03-10 18:40:38,810 | INFO     | DataEngine | EURUSD H4 history: 16.0 years — OK
+2026-03-10 18:40:38,811 | INFO     | DataEngine | GBPUSD H4 history: 16.0 years — OK
+2026-03-10 18:40:38,811 | INFO     | TrainScript | 
+==================================================
+2026-03-10 18:40:38,811 | INFO     | TrainScript |   TRAINING: EURUSD
+2026-03-10 18:40:38,811 | INFO     | TrainScript | ==================================================
+2026-03-10 18:40:38,816 | INFO     | TrainScript | Training final models on full dataset...
+2026-03-10 18:40:44,180 | INFO     | TrainScript | H4 training samples: 34870
+2026-03-10 18:40:46,843 | INFO     | H4BiasModel | H4BiasModel trained for EURUSD on 34870 samples, 14 features
+2026-03-10 18:40:46,868 | INFO     | TrainScript | H4 model saved: models\saved\h4_bias_EURUSD.pkl
+2026-03-10 18:41:22,527 | INFO     | M15EntryModel | M15EntryModel trained for EURUSD | long hit rate: 27.96% | short hit rate: 27.76% | samples: 560064 | features: 37
+2026-03-10 18:41:22,662 | INFO     | M15EntryModel | M15EntryModel saved for EURUSD
+2026-03-10 18:41:22,662 | INFO     | TrainScript | M15 model saved for EURUSD
+2026-03-10 18:41:22,762 | INFO     | TrainScript | Training complete for EURUSD
+2026-03-10 18:41:22,791 | INFO     | TrainScript | 
+Training complete: 1/1 instruments trained
+2026-03-10 18:41:22,792 | INFO     | TrainScript | All models ready. Run 'python bot.py' to start live trading.
+2026-03-10 18:54:49,057 | INFO     | TradingBot | ============================================================
+2026-03-10 18:54:49,058 | INFO     | TradingBot |   AI SWING TRADING BOT v2.0 — STARTING
+2026-03-10 18:54:49,058 | INFO     | TradingBot | ============================================================
+2026-03-10 18:54:50,267 | ERROR    | MT5Engine | MT5 initialise failed: (-2, 'Terminal: Invalid params')
+2026-03-10 18:54:50,267 | ERROR    | TradingBot | Failed to connect to MT5. Exiting.
+2026-03-10 19:12:18,130 | INFO     | TradingBot | ============================================================
+2026-03-10 19:12:18,130 | INFO     | TradingBot |   AI SWING TRADING BOT v2.0 — STARTING
+2026-03-10 19:12:18,131 | INFO     | TradingBot | ============================================================
+2026-03-10 19:12:18,158 | ERROR    | MT5Engine | MT5 initialise failed: (-2, 'Terminal: Invalid params')
+2026-03-10 19:12:18,158 | ERROR    | TradingBot | Failed to connect to MT5. Exiting.
+2026-03-10 19:14:07,325 | INFO     | TradingBot | ============================================================
+2026-03-10 19:14:07,325 | INFO     | TradingBot |   AI SWING TRADING BOT v2.0 — STARTING
+2026-03-10 19:14:07,326 | INFO     | TradingBot | ============================================================
+2026-03-10 19:14:07,334 | ERROR    | MT5Engine | MT5 initialise failed: (-10003, "IPC initialize failed, Process create failed 'C:\\ProgramData\\Microsoft\\Windows\\Start Menu\\Programs\\MetaTrader 5\\MetaTrader 5.lnk'")
+2026-03-10 19:14:07,335 | ERROR    | TradingBot | Failed to connect to MT5. Exiting.
+2026-03-10 19:15:17,654 | INFO     | TradingBot | ============================================================
+2026-03-10 19:15:17,654 | INFO     | TradingBot |   AI SWING TRADING BOT v2.0 — STARTING
+2026-03-10 19:15:17,655 | INFO     | TradingBot | ============================================================
+2026-03-10 19:15:17,663 | ERROR    | MT5Engine | MT5 initialise failed: (-10003, "IPC initialize failed, Process create failed 'C:\\ProgramData\\Microsoft\\Windows\\Start Menu\\Programs\\MetaTrader 5\\MetaTrader 5.lnk'")
+2026-03-10 19:15:17,663 | ERROR    | TradingBot | Failed to connect to MT5. Exiting.
+2026-03-10 19:18:21,209 | INFO     | TradingBot | ============================================================
+2026-03-10 19:18:21,209 | INFO     | TradingBot |   AI SWING TRADING BOT v2.0 — STARTING
+2026-03-10 19:18:21,210 | INFO     | TradingBot | ============================================================
+2026-03-10 19:18:21,218 | ERROR    | MT5Engine | MT5 initialise failed: (-10003, "IPC initialize failed, Process create failed 'C:\\ProgramData\\Microsoft\\Windows\\Start Menu\\Programs\\MetaTrader 5\\MetaTrader 5.lnk'")
+2026-03-10 19:18:21,219 | ERROR    | TradingBot | Failed to connect to MT5. Exiting.
+2026-03-10 19:19:10,873 | INFO     | TradingBot | ============================================================
+2026-03-10 19:19:10,874 | INFO     | TradingBot |   AI SWING TRADING BOT v2.0 — STARTING
+2026-03-10 19:19:10,874 | INFO     | TradingBot | ============================================================
+2026-03-10 19:19:10,892 | ERROR    | MT5Engine | MT5 initialise failed: (-10003, "IPC initialize failed, Process create failed 'C:\\Program Files\\MetaTrader 5\terminal64.exe'")
+2026-03-10 19:19:10,892 | ERROR    | TradingBot | Failed to connect to MT5. Exiting.
+2026-03-10 19:21:03,183 | INFO     | TradingBot | ============================================================
+2026-03-10 19:21:03,183 | INFO     | TradingBot |   AI SWING TRADING BOT v2.0 — STARTING
+2026-03-10 19:21:03,184 | INFO     | TradingBot | ============================================================
+2026-03-10 19:21:03,194 | ERROR    | MT5Engine | MT5 initialise failed: (-10003, "IPC initialize failed, Process create failed 'C:\\Program Files\\MetaTrader 5\terminal64.exe'")
+2026-03-10 19:21:03,195 | ERROR    | TradingBot | Failed to connect to MT5. Exiting.
+2026-03-10 19:22:20,073 | INFO     | TradingBot | ============================================================
+2026-03-10 19:22:20,074 | INFO     | TradingBot |   AI SWING TRADING BOT v2.0 — STARTING
+2026-03-10 19:22:20,074 | INFO     | TradingBot | ============================================================
+2026-03-10 19:22:20,083 | INFO     | MT5Engine | MT5 connected — account 7386248 | balance 500.0 | equity 500.0 | server FPMarketsSC-Demo
+2026-03-10 19:22:20,084 | WARNING  | RiskEngine | DRAWDOWN RECOVERY MODE ACTIVATED — drawdown=50.00%, equity=500.00
+2026-03-10 19:22:20,084 | INFO     | TradingBot | Account equity: 500.0 USD
+2026-03-10 19:22:21,715 | INFO     | H4BiasModel | H4BiasModel loaded from models\saved\h4_bias_EURUSD.pkl
+2026-03-10 19:22:21,746 | INFO     | M15EntryModel | M15EntryModel loaded for EURUSD
+2026-03-10 19:22:21,746 | WARNING  | H4BiasModel | No saved H4BiasModel found at models\saved\h4_bias_GBPUSD.pkl
+2026-03-10 19:22:21,747 | WARNING  | TradingBot | One or more models not found. Run 'python scripts/train.py' to train before live trading.
+2026-03-10 19:22:23,088 | WARNING  | NewsFilter | News API fetch failed (HTTPError: 403 Client Error: Forbidden for url: https://finnhub.io/api/v1/calendar/economic?from=2026-03-10&to=2026-03-12&token=d6mrqu1r01qir35i81b0d6mrqu1r01qir35i81bg) — blackout mode active
+2026-03-10 19:22:23,090 | INFO     | TradingBot | Bot started. Entering main loop...
+2026-03-10 19:22:23,109 | INFO     | TradingBot | Daily DB backup: logs\backups\trades_2026-03-10.db
+2026-03-10 19:22:23,131 | INFO     | TradingBot | EURUSD: News API unavailable — blackout mode active
+2026-03-10 19:22:23,324 | INFO     | TradingBot | GBPUSD: News API unavailable — blackout mode active
+2026-03-10 19:22:35,823 | INFO     | TradingBot | Shutdown signal received — stopping bot gracefully...
+2026-03-10 19:22:35,823 | INFO     | MT5Engine | MT5 disconnected
+2026-03-10 19:35:47,210 | INFO     | TradingBot | ============================================================
+2026-03-10 19:35:47,211 | INFO     | TradingBot |   AI SWING TRADING BOT v2.0 — STARTING
+2026-03-10 19:35:47,211 | INFO     | TradingBot | ============================================================
+2026-03-10 19:35:47,221 | INFO     | MT5Engine | MT5 connected — account 7386248 | balance 500.0 | equity 500.0 | server FPMarketsSC-Demo
+2026-03-10 19:35:47,221 | INFO     | TradingBot | Account equity: 500.0 USD
+2026-03-10 19:35:48,897 | INFO     | H4BiasModel | H4BiasModel loaded from models\saved\h4_bias_EURUSD.pkl
+2026-03-10 19:35:48,932 | INFO     | M15EntryModel | M15EntryModel loaded for EURUSD
+2026-03-10 19:35:48,932 | WARNING  | H4BiasModel | No saved H4BiasModel found at models\saved\h4_bias_GBPUSD.pkl
+2026-03-10 19:35:48,933 | WARNING  | TradingBot | One or more models not found. Run 'python scripts/train.py' to train before live trading.
+2026-03-10 19:35:50,252 | WARNING  | NewsFilter | News API fetch failed (HTTPError: 403 Client Error: Forbidden for url: https://finnhub.io/api/v1/calendar/economic?from=2026-03-10&to=2026-03-12&token=d6mrqu1r01qir35i81b0d6mrqu1r01qir35i81bg) — blackout mode active
+2026-03-10 19:35:50,255 | INFO     | TradingBot | Bot started. Entering main loop...
+2026-03-10 19:35:50,278 | INFO     | TradingBot | Daily DB backup: logs\backups\trades_2026-03-10.db
+2026-03-10 19:35:50,290 | INFO     | TradingBot | EURUSD: News API unavailable — blackout mode active
+2026-03-10 19:35:50,478 | INFO     | TradingBot | GBPUSD: News API unavailable — blackout mode active
+2026-03-10 19:39:03,173 | INFO     | TradingBot | Shutdown signal received — stopping bot gracefully...
+2026-03-10 19:39:03,174 | INFO     | MT5Engine | MT5 disconnected
+2026-03-10 19:40:49,631 | INFO     | TradingBot | ============================================================
+2026-03-10 19:40:49,632 | INFO     | TradingBot |   AI SWING TRADING BOT v2.0 — STARTING
+2026-03-10 19:40:49,632 | INFO     | TradingBot | ============================================================
+2026-03-10 19:40:49,640 | INFO     | MT5Engine | MT5 connected — account 7386248 | balance 500.0 | equity 500.0 | server FPMarketsSC-Demo
+2026-03-10 19:40:49,641 | INFO     | TradingBot | Account equity: 500.0 USD
+2026-03-10 19:40:51,241 | INFO     | H4BiasModel | H4BiasModel loaded from models\saved\h4_bias_EURUSD.pkl
+2026-03-10 19:40:51,275 | INFO     | M15EntryModel | M15EntryModel loaded for EURUSD
+2026-03-10 19:40:51,276 | WARNING  | H4BiasModel | No saved H4BiasModel found at models\saved\h4_bias_GBPUSD.pkl
+2026-03-10 19:40:51,276 | WARNING  | TradingBot | One or more models not found. Run 'python scripts/train.py' to train before live trading.
+2026-03-10 19:40:52,598 | WARNING  | NewsFilter | News API fetch failed (HTTPError: 403 Client Error: Forbidden for url: https://finnhub.io/api/v1/calendar/economic?from=2026-03-10&to=2026-03-12&token=d6o5e69r01qu09ci6170d6o5e69r01qu09ci617g) — blackout mode active
+2026-03-10 19:40:52,600 | INFO     | TradingBot | Bot started. Entering main loop...
+2026-03-10 19:40:52,619 | INFO     | TradingBot | Daily DB backup: logs\backups\trades_2026-03-10.db
+2026-03-10 19:40:52,629 | INFO     | TradingBot | EURUSD: News API unavailable — blackout mode active
+2026-03-10 19:40:52,636 | INFO     | TradingBot | GBPUSD: News API unavailable — blackout mode active
+2026-03-10 19:45:22,958 | INFO     | TradingBot | EURUSD: News API unavailable — blackout mode active
+2026-03-10 19:45:22,965 | INFO     | TradingBot | GBPUSD: News API unavailable — blackout mode active
+2026-03-10 19:45:57,986 | INFO     | TradingBot | Shutdown signal received — stopping bot gracefully...
+2026-03-10 19:45:57,987 | INFO     | MT5Engine | MT5 disconnected
+2026-03-10 19:46:06,872 | INFO     | TradingBot | ============================================================
+2026-03-10 19:46:06,873 | INFO     | TradingBot |   AI SWING TRADING BOT v2.0 — STARTING
+2026-03-10 19:46:06,873 | INFO     | TradingBot | ============================================================
+2026-03-10 19:46:06,882 | INFO     | MT5Engine | MT5 connected — account 7386248 | balance 500.0 | equity 500.0 | server FPMarketsSC-Demo
+2026-03-10 19:46:06,882 | INFO     | TradingBot | Account equity: 500.0 USD
+2026-03-10 19:46:08,444 | INFO     | H4BiasModel | H4BiasModel loaded from models\saved\h4_bias_EURUSD.pkl
+2026-03-10 19:46:08,484 | INFO     | M15EntryModel | M15EntryModel loaded for EURUSD
+2026-03-10 19:46:08,485 | WARNING  | H4BiasModel | No saved H4BiasModel found at models\saved\h4_bias_GBPUSD.pkl
+2026-03-10 19:46:08,486 | WARNING  | TradingBot | One or more models not found. Run 'python scripts/train.py' to train before live trading.
+2026-03-10 19:46:08,486 | WARNING  | NewsFilter | News API fetch failed (TypeError: object of type 'NoneType' has no len()) — blackout mode active
+2026-03-10 19:46:08,487 | INFO     | TradingBot | Bot started. Entering main loop...
+2026-03-10 19:46:08,506 | INFO     | TradingBot | Daily DB backup: logs\backups\trades_2026-03-10.db
+2026-03-10 19:46:08,521 | INFO     | TradingBot | EURUSD: News API unavailable — blackout mode active
+2026-03-10 19:46:08,533 | INFO     | TradingBot | GBPUSD: News API unavailable — blackout mode active
+2026-03-10 19:47:51,781 | INFO     | TradingBot | Shutdown signal received — stopping bot gracefully...
+2026-03-10 19:47:51,782 | INFO     | MT5Engine | MT5 disconnected
+2026-03-10 19:48:31,345 | INFO     | TradingBot | ============================================================
+2026-03-10 19:48:31,345 | INFO     | TradingBot |   AI SWING TRADING BOT v2.0 — STARTING
+2026-03-10 19:48:31,345 | INFO     | TradingBot | ============================================================
+2026-03-10 19:48:31,350 | INFO     | MT5Engine | MT5 connected — account 7386248 | balance 500.0 | equity 500.0 | server FPMarketsSC-Demo
+2026-03-10 19:48:31,350 | INFO     | TradingBot | Account equity: 500.0 USD
+2026-03-10 19:48:32,719 | INFO     | H4BiasModel | H4BiasModel loaded from models\saved\h4_bias_EURUSD.pkl
+2026-03-10 19:48:32,758 | INFO     | M15EntryModel | M15EntryModel loaded for EURUSD
+2026-03-10 19:48:32,759 | WARNING  | H4BiasModel | No saved H4BiasModel found at models\saved\h4_bias_GBPUSD.pkl
+2026-03-10 19:48:32,759 | WARNING  | TradingBot | One or more models not found. Run 'python scripts/train.py' to train before live trading.
+2026-03-10 19:48:32,760 | WARNING  | NewsFilter | News API fetch failed (TypeError: object of type 'NoneType' has no len()) — blackout mode active
+2026-03-10 19:48:32,760 | INFO     | TradingBot | Bot started. Entering main loop...
+2026-03-10 19:48:32,780 | INFO     | TradingBot | Daily DB backup: logs\backups\trades_2026-03-10.db
+2026-03-10 19:48:32,794 | INFO     | TradingBot | EURUSD: News API unavailable — blackout mode active
+2026-03-10 19:48:32,805 | INFO     | TradingBot | GBPUSD: News API unavailable — blackout mode active
+2026-03-10 19:48:48,518 | INFO     | TradingBot | Shutdown signal received — stopping bot gracefully...
+2026-03-10 19:48:48,518 | INFO     | MT5Engine | MT5 disconnected
+2026-03-10 19:50:35,215 | INFO     | TradingBot | ============================================================
+2026-03-10 19:50:35,215 | INFO     | TradingBot |   AI SWING TRADING BOT v2.0 — STARTING
+2026-03-10 19:50:35,216 | INFO     | TradingBot | ============================================================
+2026-03-10 19:50:35,225 | INFO     | MT5Engine | MT5 connected — account 7386248 | balance 500.0 | equity 500.0 | server FPMarketsSC-Demo
+2026-03-10 19:50:35,225 | INFO     | TradingBot | Account equity: 500.0 USD
+2026-03-10 19:50:36,806 | INFO     | H4BiasModel | H4BiasModel loaded from models\saved\h4_bias_EURUSD.pkl
+2026-03-10 19:50:36,845 | INFO     | M15EntryModel | M15EntryModel loaded for EURUSD
+2026-03-10 19:50:36,846 | WARNING  | H4BiasModel | No saved H4BiasModel found at models\saved\h4_bias_GBPUSD.pkl
+2026-03-10 19:50:36,846 | WARNING  | TradingBot | One or more models not found. Run 'python scripts/train.py' to train before live trading.
+2026-03-10 19:50:38,071 | WARNING  | NewsFilter | News API fetch failed (HTTPError: 403 Client Error: Forbidden for url: https://finnhub.io/api/v1/calendar/economic?from=2026-03-10&to=2026-03-12&token=d6o5e69r01qu09ci6170d6o5e69r01qu09ci617g) — blackout mode active
+2026-03-10 19:50:38,074 | INFO     | TradingBot | Bot started. Entering main loop...
+2026-03-10 19:50:38,096 | INFO     | TradingBot | Daily DB backup: logs\backups\trades_2026-03-10.db
+2026-03-10 19:50:38,107 | INFO     | TradingBot | EURUSD: News API unavailable — blackout mode active
+2026-03-10 19:50:38,118 | INFO     | TradingBot | GBPUSD: News API unavailable — blackout mode active
+2026-03-10 19:54:57,225 | INFO     | TradingBot | Shutdown signal received — stopping bot gracefully...
+2026-03-10 19:54:57,226 | INFO     | MT5Engine | MT5 disconnected
+2026-03-10 19:59:11,315 | INFO     | DataEngine | EURUSD H4 history: 16.0 years — OK
+2026-03-10 19:59:11,316 | INFO     | DataEngine | GBPUSD H4 history: 16.0 years — OK
+2026-03-10 19:59:11,316 | INFO     | TrainScript | 
+==================================================
+2026-03-10 19:59:11,317 | INFO     | TrainScript |   TRAINING: GBPUSD
+2026-03-10 19:59:11,317 | INFO     | TrainScript | ==================================================
+2026-03-10 19:59:11,322 | INFO     | TrainScript | Training final models on full dataset...
+2026-03-10 19:59:16,798 | INFO     | TrainScript | H4 training samples: 34930
+2026-03-10 19:59:18,981 | INFO     | H4BiasModel | H4BiasModel trained for GBPUSD on 34930 samples, 14 features
+2026-03-10 19:59:19,006 | INFO     | TrainScript | H4 model saved: models\saved\h4_bias_GBPUSD.pkl
+2026-03-10 19:59:49,365 | INFO     | M15EntryModel | M15EntryModel trained for GBPUSD | long hit rate: 27.78% | short hit rate: 27.95% | samples: 561024 | features: 37
+2026-03-10 19:59:49,505 | INFO     | M15EntryModel | M15EntryModel saved for GBPUSD
+2026-03-10 19:59:49,506 | INFO     | TrainScript | M15 model saved for GBPUSD
+2026-03-10 19:59:49,523 | INFO     | TrainScript | Training complete for GBPUSD
+2026-03-10 19:59:49,556 | INFO     | TrainScript | 
+Training complete: 1/1 instruments trained
+2026-03-10 19:59:49,556 | INFO     | TrainScript | All models ready. Run 'python bot.py' to start live trading.
+2026-03-10 20:00:12,627 | INFO     | TradingBot | ============================================================
+2026-03-10 20:00:12,628 | INFO     | TradingBot |   AI SWING TRADING BOT v2.0 — STARTING
+2026-03-10 20:00:12,628 | INFO     | TradingBot | ============================================================
+2026-03-10 20:00:12,637 | INFO     | MT5Engine | MT5 connected — account 7386248 | balance 500.0 | equity 500.0 | server FPMarketsSC-Demo
+2026-03-10 20:00:12,638 | INFO     | TradingBot | Account equity: 500.0 USD
+2026-03-10 20:00:14,266 | INFO     | H4BiasModel | H4BiasModel loaded from models\saved\h4_bias_EURUSD.pkl
+2026-03-10 20:00:14,300 | INFO     | M15EntryModel | M15EntryModel loaded for EURUSD
+2026-03-10 20:00:14,310 | INFO     | H4BiasModel | H4BiasModel loaded from models\saved\h4_bias_GBPUSD.pkl
+2026-03-10 20:00:14,343 | INFO     | M15EntryModel | M15EntryModel loaded for GBPUSD
+2026-03-10 20:00:14,344 | INFO     | NewsFilter | Finnhub free tier detected — news filter bypassed, trading permitted
+2026-03-10 20:00:14,344 | INFO     | TradingBot | Bot started. Entering main loop...
+2026-03-10 20:00:14,361 | INFO     | TradingBot | Daily DB backup: logs\backups\trades_2026-03-10.db
+2026-03-10 20:15:26,570 | INFO     | NewsFilter | Finnhub free tier detected — news filter bypassed, trading permitted
+2026-03-10 20:30:28,110 | INFO     | NewsFilter | Finnhub free tier detected — news filter bypassed, trading permitted
+2026-03-10 20:45:29,752 | INFO     | NewsFilter | Finnhub free tier detected — news filter bypassed, trading permitted
+2026-03-10 21:00:01,333 | INFO     | NewsFilter | Finnhub free tier detected — news filter bypassed, trading permitted
+2026-03-10 21:15:02,753 | INFO     | NewsFilter | Finnhub free tier detected — news filter bypassed, trading permitted
+2026-03-10 21:20:55,403 | INFO     | TradingBot | Shutdown signal received — stopping bot gracefully...
+2026-03-10 21:20:55,404 | INFO     | MT5Engine | MT5 disconnected

@@ -1,0 +1,11 @@
+2026-04-14 09:56:56,027 | INFO     | DataEngine | EURUSD H4 history: 16.0 years — OK
+2026-04-14 09:56:56,028 | INFO     | DataEngine | GBPUSD H4 history: 16.0 years — OK
+2026-04-14 09:56:56,028 | INFO     | TrainScript | 
+==================================================
+2026-04-14 09:56:56,028 | INFO     | TrainScript |   TRAINING: EURUSD
+2026-04-14 09:56:56,029 | INFO     | TrainScript | ==================================================
+2026-04-14 09:56:56,035 | INFO     | TrainScript | Running QMRP walk-forward optimisation...
+2026-04-14 09:56:56,036 | INFO     | WalkForward | QMRP started for EURUSD
+2026-04-14 09:56:56,077 | INFO     | WalkForward | Generated 56 walk-forward folds
+2026-04-14 09:56:56,077 | INFO     | WalkForward | Processing fold 1/56
+2026-04-14 09:56:56,764 | WARNING  | H4BiasModel | LightGBM not available — falling back to GradientBoostingClassifier

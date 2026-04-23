@@ -1,0 +1,260 @@
+2026-03-16 08:44:37,906 | INFO     | DataEngine | EURUSD H4 history: 16.0 years — OK
+2026-03-16 08:44:37,909 | INFO     | DataEngine | GBPUSD H4 history: 16.0 years — OK
+2026-03-16 08:44:37,909 | INFO     | TrainScript | 
+==================================================
+2026-03-16 08:44:37,910 | INFO     | TrainScript |   TRAINING: EURUSD
+2026-03-16 08:44:37,910 | INFO     | TrainScript | ==================================================
+2026-03-16 08:44:37,919 | INFO     | TrainScript | Running QMRP walk-forward optimisation...
+2026-03-16 08:44:37,920 | INFO     | WalkForward | QMRP started for EURUSD
+2026-03-16 08:44:37,952 | INFO     | WalkForward | Generated 56 walk-forward folds
+2026-03-16 08:44:37,952 | INFO     | WalkForward | Processing fold 1/56
+2026-03-16 08:44:46,819 | INFO     | H4BiasModel | H4BiasModel trained for EURUSD on 2039 samples, 14 features
+2026-03-16 08:44:50,403 | INFO     | M15EntryModel | M15EntryModel trained for EURUSD | long hit rate: 27.69% | short hit rate: 29.60% | samples: 34753 | features: 37
+2026-03-16 08:45:20,380 | INFO     | WalkForward | Fold 1: PASS | Sortino=0.000 | MaxDD=30.00% | Trades=200
+2026-03-16 08:45:20,380 | INFO     | WalkForward | Processing fold 2/56
+2026-03-16 08:45:21,409 | INFO     | H4BiasModel | H4BiasModel trained for EURUSD on 2191 samples, 14 features
+2026-03-16 08:45:25,262 | INFO     | M15EntryModel | M15EntryModel trained for EURUSD | long hit rate: 28.30% | short hit rate: 29.04% | samples: 35041 | features: 37
+2026-03-16 08:45:52,449 | INFO     | WalkForward | Fold 2: FAIL | Sortino=0.000 | MaxDD=100.00% | Trades=200
+2026-03-16 08:45:52,450 | INFO     | WalkForward | Processing fold 3/56
+2026-03-16 08:45:53,633 | INFO     | H4BiasModel | H4BiasModel trained for EURUSD on 2191 samples, 14 features
+2026-03-16 08:45:57,575 | INFO     | M15EntryModel | M15EntryModel trained for EURUSD | long hit rate: 29.54% | short hit rate: 28.32% | samples: 35041 | features: 37
+2026-03-16 08:46:32,765 | INFO     | WalkForward | Fold 3: PASS | Sortino=0.000 | MaxDD=20.00% | Trades=200
+2026-03-16 08:46:32,765 | INFO     | WalkForward | Processing fold 4/56
+2026-03-16 08:46:34,067 | INFO     | H4BiasModel | H4BiasModel trained for EURUSD on 2191 samples, 14 features
+2026-03-16 08:46:38,426 | INFO     | M15EntryModel | M15EntryModel trained for EURUSD | long hit rate: 29.23% | short hit rate: 29.73% | samples: 35041 | features: 37
+2026-03-16 08:47:00,133 | INFO     | WalkForward | Fold 4: PASS | Sortino=0.000 | MaxDD=35.29% | Trades=200
+2026-03-16 08:47:00,134 | INFO     | WalkForward | Processing fold 5/56
+2026-03-16 08:47:01,540 | INFO     | H4BiasModel | H4BiasModel trained for EURUSD on 2191 samples, 14 features
+2026-03-16 08:47:05,974 | INFO     | M15EntryModel | M15EntryModel trained for EURUSD | long hit rate: 28.00% | short hit rate: 29.99% | samples: 35041 | features: 37
+2026-03-16 08:47:31,234 | INFO     | WalkForward | Fold 5: FAIL | Sortino=0.000 | MaxDD=100.00% | Trades=200
+2026-03-16 08:47:31,235 | INFO     | WalkForward | Processing fold 6/56
+2026-03-16 08:47:32,821 | INFO     | H4BiasModel | H4BiasModel trained for EURUSD on 2197 samples, 14 features
+2026-03-16 08:47:38,042 | INFO     | M15EntryModel | M15EntryModel trained for EURUSD | long hit rate: 28.36% | short hit rate: 30.09% | samples: 35137 | features: 37
+2026-03-16 08:47:59,046 | INFO     | WalkForward | Fold 6: PASS | Sortino=0.000 | MaxDD=16.36% | Trades=200
+2026-03-16 08:47:59,047 | INFO     | WalkForward | Processing fold 7/56
+2026-03-16 08:48:00,749 | INFO     | H4BiasModel | H4BiasModel trained for EURUSD on 2197 samples, 14 features
+2026-03-16 08:48:05,514 | INFO     | M15EntryModel | M15EntryModel trained for EURUSD | long hit rate: 27.71% | short hit rate: 30.32% | samples: 35137 | features: 37
+2026-03-16 08:48:41,093 | INFO     | WalkForward | Fold 7: PASS | Sortino=0.000 | MaxDD=28.12% | Trades=200
+2026-03-16 08:48:41,093 | INFO     | WalkForward | Processing fold 8/56
+2026-03-16 08:48:42,853 | INFO     | H4BiasModel | H4BiasModel trained for EURUSD on 2197 samples, 14 features
+2026-03-16 08:48:47,903 | INFO     | M15EntryModel | M15EntryModel trained for EURUSD | long hit rate: 28.90% | short hit rate: 29.37% | samples: 35137 | features: 37
+2026-03-16 08:49:16,568 | INFO     | WalkForward | Fold 8: FAIL | Sortino=0.000 | MaxDD=85.71% | Trades=200
+2026-03-16 08:49:16,568 | INFO     | WalkForward | Processing fold 9/56
+2026-03-16 08:49:18,429 | INFO     | H4BiasModel | H4BiasModel trained for EURUSD on 2197 samples, 14 features
+2026-03-16 08:49:23,875 | INFO     | M15EntryModel | M15EntryModel trained for EURUSD | long hit rate: 29.13% | short hit rate: 28.71% | samples: 35137 | features: 37
+2026-03-16 08:49:51,242 | INFO     | WalkForward | Fold 9: FAIL | Sortino=0.000 | MaxDD=100.00% | Trades=200
+2026-03-16 08:49:51,242 | INFO     | WalkForward | Processing fold 10/56
+2026-03-16 08:49:53,287 | INFO     | H4BiasModel | H4BiasModel trained for EURUSD on 2191 samples, 14 features
+2026-03-16 08:49:59,205 | INFO     | M15EntryModel | M15EntryModel trained for EURUSD | long hit rate: 28.58% | short hit rate: 28.13% | samples: 35041 | features: 37
+2026-03-16 08:50:32,139 | INFO     | WalkForward | Fold 10: PASS | Sortino=0.000 | MaxDD=11.11% | Trades=200
+2026-03-16 08:50:32,139 | INFO     | WalkForward | Processing fold 11/56
+2026-03-16 08:50:34,307 | INFO     | H4BiasModel | H4BiasModel trained for EURUSD on 2191 samples, 14 features
+2026-03-16 08:50:39,943 | INFO     | M15EntryModel | M15EntryModel trained for EURUSD | long hit rate: 28.85% | short hit rate: 26.85% | samples: 35041 | features: 37
+2026-03-16 08:51:21,817 | INFO     | WalkForward | Fold 11: FAIL | Sortino=0.000 | MaxDD=100.00% | Trades=200
+2026-03-16 08:51:21,818 | INFO     | WalkForward | Processing fold 12/56
+2026-03-16 08:51:24,270 | INFO     | H4BiasModel | H4BiasModel trained for EURUSD on 2191 samples, 14 features
+2026-03-16 08:51:32,515 | INFO     | M15EntryModel | M15EntryModel trained for EURUSD | long hit rate: 27.44% | short hit rate: 27.10% | samples: 35041 | features: 37
+2026-03-16 08:52:03,716 | INFO     | WalkForward | Fold 12: FAIL | Sortino=0.000 | MaxDD=100.00% | Trades=200
+2026-03-16 08:52:03,717 | INFO     | WalkForward | Processing fold 13/56
+2026-03-16 08:52:06,202 | INFO     | H4BiasModel | H4BiasModel trained for EURUSD on 2191 samples, 14 features
+2026-03-16 08:52:12,498 | INFO     | M15EntryModel | M15EntryModel trained for EURUSD | long hit rate: 28.10% | short hit rate: 26.99% | samples: 35041 | features: 37
+2026-03-16 08:52:44,519 | INFO     | WalkForward | Fold 13: FAIL | Sortino=0.000 | MaxDD=60.00% | Trades=200
+2026-03-16 08:52:44,520 | INFO     | WalkForward | Processing fold 14/56
+2026-03-16 08:52:48,009 | INFO     | H4BiasModel | H4BiasModel trained for EURUSD on 2191 samples, 14 features
+2026-03-16 08:52:55,878 | INFO     | M15EntryModel | M15EntryModel trained for EURUSD | long hit rate: 27.50% | short hit rate: 26.79% | samples: 35041 | features: 37
+2026-03-16 08:53:27,547 | INFO     | WalkForward | Fold 14: PASS | Sortino=0.000 | MaxDD=30.00% | Trades=200
+2026-03-16 08:53:27,548 | INFO     | WalkForward | Processing fold 15/56
+2026-03-16 08:53:30,177 | INFO     | H4BiasModel | H4BiasModel trained for EURUSD on 2191 samples, 14 features
+2026-03-16 08:53:36,865 | INFO     | M15EntryModel | M15EntryModel trained for EURUSD | long hit rate: 28.27% | short hit rate: 26.57% | samples: 35041 | features: 37
+2026-03-16 08:54:17,421 | INFO     | WalkForward | Fold 15: FAIL | Sortino=0.000 | MaxDD=100.00% | Trades=200
+2026-03-16 08:54:17,421 | INFO     | WalkForward | Processing fold 16/56
+2026-03-16 08:54:20,367 | INFO     | H4BiasModel | H4BiasModel trained for EURUSD on 2191 samples, 14 features
+2026-03-16 08:54:28,212 | INFO     | M15EntryModel | M15EntryModel trained for EURUSD | long hit rate: 27.78% | short hit rate: 26.53% | samples: 35041 | features: 37
+2026-03-16 08:55:08,199 | INFO     | WalkForward | Fold 16: FAIL | Sortino=0.000 | MaxDD=100.00% | Trades=200
+2026-03-16 08:55:08,200 | INFO     | WalkForward | Processing fold 17/56
+2026-03-16 08:55:11,355 | INFO     | H4BiasModel | H4BiasModel trained for EURUSD on 2191 samples, 14 features
+2026-03-16 08:55:18,640 | INFO     | M15EntryModel | M15EntryModel trained for EURUSD | long hit rate: 26.72% | short hit rate: 27.19% | samples: 35041 | features: 37
+2026-03-16 08:55:52,975 | INFO     | WalkForward | Fold 17: PASS | Sortino=0.000 | MaxDD=30.00% | Trades=200
+2026-03-16 08:55:52,976 | INFO     | WalkForward | Processing fold 18/56
+2026-03-16 08:55:56,173 | INFO     | H4BiasModel | H4BiasModel trained for EURUSD on 2191 samples, 14 features
+2026-03-16 08:56:04,039 | INFO     | M15EntryModel | M15EntryModel trained for EURUSD | long hit rate: 26.74% | short hit rate: 28.75% | samples: 35041 | features: 37
+2026-03-16 08:56:31,463 | INFO     | WalkForward | Fold 18: FAIL | Sortino=0.000 | MaxDD=60.00% | Trades=200
+2026-03-16 08:56:31,463 | INFO     | WalkForward | Processing fold 19/56
+2026-03-16 08:56:34,608 | INFO     | H4BiasModel | H4BiasModel trained for EURUSD on 2191 samples, 14 features
+2026-03-16 08:56:42,205 | INFO     | M15EntryModel | M15EntryModel trained for EURUSD | long hit rate: 26.09% | short hit rate: 29.25% | samples: 35041 | features: 37
+2026-03-16 08:57:17,953 | INFO     | WalkForward | Fold 19: FAIL | Sortino=0.000 | MaxDD=100.00% | Trades=200
+2026-03-16 08:57:17,953 | INFO     | WalkForward | Processing fold 20/56
+2026-03-16 08:57:21,238 | INFO     | H4BiasModel | H4BiasModel trained for EURUSD on 2191 samples, 14 features
+2026-03-16 08:57:29,442 | INFO     | M15EntryModel | M15EntryModel trained for EURUSD | long hit rate: 27.37% | short hit rate: 29.22% | samples: 35041 | features: 37
+2026-03-16 08:57:57,741 | INFO     | WalkForward | Fold 20: FAIL | Sortino=0.000 | MaxDD=100.00% | Trades=200
+2026-03-16 08:57:57,741 | INFO     | WalkForward | Processing fold 21/56
+2026-03-16 08:58:01,124 | INFO     | H4BiasModel | H4BiasModel trained for EURUSD on 2191 samples, 14 features
+2026-03-16 08:58:08,987 | INFO     | M15EntryModel | M15EntryModel trained for EURUSD | long hit rate: 28.06% | short hit rate: 29.16% | samples: 35041 | features: 37
+2026-03-16 08:58:44,268 | INFO     | WalkForward | Fold 21: FAIL | Sortino=0.000 | MaxDD=73.68% | Trades=200
+2026-03-16 08:58:44,268 | INFO     | WalkForward | Processing fold 22/56
+2026-03-16 08:58:47,825 | INFO     | H4BiasModel | H4BiasModel trained for EURUSD on 2197 samples, 14 features
+2026-03-16 08:58:55,933 | INFO     | M15EntryModel | M15EntryModel trained for EURUSD | long hit rate: 27.92% | short hit rate: 28.76% | samples: 35137 | features: 37
+2026-03-16 08:59:24,791 | INFO     | WalkForward | Fold 22: PASS | Sortino=0.000 | MaxDD=22.22% | Trades=200
+2026-03-16 08:59:24,791 | INFO     | WalkForward | Processing fold 23/56
+2026-03-16 08:59:28,469 | INFO     | H4BiasModel | H4BiasModel trained for EURUSD on 2197 samples, 14 features
+2026-03-16 08:59:36,849 | INFO     | M15EntryModel | M15EntryModel trained for EURUSD | long hit rate: 28.28% | short hit rate: 28.37% | samples: 35137 | features: 37
+2026-03-16 09:00:01,672 | INFO     | WalkForward | Fold 23: PASS | Sortino=0.000 | MaxDD=20.00% | Trades=200
+2026-03-16 09:00:01,672 | INFO     | WalkForward | Processing fold 24/56
+2026-03-16 09:00:05,475 | INFO     | H4BiasModel | H4BiasModel trained for EURUSD on 2197 samples, 14 features
+2026-03-16 09:00:13,982 | INFO     | M15EntryModel | M15EntryModel trained for EURUSD | long hit rate: 27.92% | short hit rate: 27.33% | samples: 35137 | features: 37
+2026-03-16 09:00:48,497 | INFO     | WalkForward | Fold 24: FAIL | Sortino=0.000 | MaxDD=60.00% | Trades=200
+2026-03-16 09:00:48,498 | INFO     | WalkForward | Processing fold 25/56
+2026-03-16 09:00:52,343 | INFO     | H4BiasModel | H4BiasModel trained for EURUSD on 2197 samples, 14 features
+2026-03-16 09:01:01,191 | INFO     | M15EntryModel | M15EntryModel trained for EURUSD | long hit rate: 27.41% | short hit rate: 27.76% | samples: 35137 | features: 37
+2026-03-16 09:01:31,836 | INFO     | WalkForward | Fold 25: PASS | Sortino=0.000 | MaxDD=20.00% | Trades=200
+2026-03-16 09:01:31,836 | INFO     | WalkForward | Processing fold 26/56
+2026-03-16 09:01:35,865 | INFO     | H4BiasModel | H4BiasModel trained for EURUSD on 2191 samples, 14 features
+2026-03-16 09:01:44,921 | INFO     | M15EntryModel | M15EntryModel trained for EURUSD | long hit rate: 27.98% | short hit rate: 27.21% | samples: 35041 | features: 37
+2026-03-16 09:02:14,978 | INFO     | WalkForward | Fold 26: PASS | Sortino=0.000 | MaxDD=24.00% | Trades=200
+2026-03-16 09:02:14,979 | INFO     | WalkForward | Processing fold 27/56
+2026-03-16 09:02:19,134 | INFO     | H4BiasModel | H4BiasModel trained for EURUSD on 2191 samples, 14 features
+2026-03-16 09:02:28,299 | INFO     | M15EntryModel | M15EntryModel trained for EURUSD | long hit rate: 28.26% | short hit rate: 26.67% | samples: 35041 | features: 37
+2026-03-16 09:02:58,869 | INFO     | WalkForward | Fold 27: FAIL | Sortino=0.000 | MaxDD=85.71% | Trades=200
+2026-03-16 09:02:58,870 | INFO     | WalkForward | Processing fold 28/56
+2026-03-16 09:03:03,105 | INFO     | H4BiasModel | H4BiasModel trained for EURUSD on 2191 samples, 14 features
+2026-03-16 09:03:12,561 | INFO     | M15EntryModel | M15EntryModel trained for EURUSD | long hit rate: 28.18% | short hit rate: 27.02% | samples: 35041 | features: 37
+2026-03-16 09:03:42,961 | INFO     | WalkForward | Fold 28: FAIL | Sortino=0.000 | MaxDD=100.00% | Trades=200
+2026-03-16 09:03:42,962 | INFO     | WalkForward | Processing fold 29/56
+2026-03-16 09:03:47,376 | INFO     | H4BiasModel | H4BiasModel trained for EURUSD on 2191 samples, 14 features
+2026-03-16 09:03:57,182 | INFO     | M15EntryModel | M15EntryModel trained for EURUSD | long hit rate: 28.33% | short hit rate: 26.68% | samples: 35041 | features: 37
+2026-03-16 09:04:33,454 | INFO     | WalkForward | Fold 29: PASS | Sortino=0.000 | MaxDD=30.00% | Trades=200
+2026-03-16 09:04:33,454 | INFO     | WalkForward | Processing fold 30/56
+2026-03-16 09:04:37,927 | INFO     | H4BiasModel | H4BiasModel trained for EURUSD on 2191 samples, 14 features
+2026-03-16 09:04:48,282 | INFO     | M15EntryModel | M15EntryModel trained for EURUSD | long hit rate: 28.47% | short hit rate: 26.01% | samples: 35041 | features: 37
+2026-03-16 09:05:25,800 | INFO     | WalkForward | Fold 30: FAIL | Sortino=0.000 | MaxDD=100.00% | Trades=200
+2026-03-16 09:05:25,801 | INFO     | WalkForward | Processing fold 31/56
+2026-03-16 09:05:30,455 | INFO     | H4BiasModel | H4BiasModel trained for EURUSD on 2191 samples, 14 features
+2026-03-16 09:05:40,714 | INFO     | M15EntryModel | M15EntryModel trained for EURUSD | long hit rate: 27.15% | short hit rate: 27.16% | samples: 35041 | features: 37
+2026-03-16 09:06:11,286 | INFO     | WalkForward | Fold 31: FAIL | Sortino=0.000 | MaxDD=100.00% | Trades=200
+2026-03-16 09:06:11,286 | INFO     | WalkForward | Processing fold 32/56
+2026-03-16 09:06:16,073 | INFO     | H4BiasModel | H4BiasModel trained for EURUSD on 2191 samples, 14 features
+2026-03-16 09:06:26,072 | INFO     | M15EntryModel | M15EntryModel trained for EURUSD | long hit rate: 27.24% | short hit rate: 26.75% | samples: 35041 | features: 37
+2026-03-16 09:06:55,985 | INFO     | WalkForward | Fold 32: PASS | Sortino=0.000 | MaxDD=24.00% | Trades=200
+2026-03-16 09:06:55,986 | INFO     | WalkForward | Processing fold 33/56
+2026-03-16 09:07:01,093 | INFO     | H4BiasModel | H4BiasModel trained for EURUSD on 2191 samples, 14 features
+2026-03-16 09:07:12,065 | INFO     | M15EntryModel | M15EntryModel trained for EURUSD | long hit rate: 27.58% | short hit rate: 26.95% | samples: 35041 | features: 37
+2026-03-16 09:07:45,310 | INFO     | WalkForward | Fold 33: FAIL | Sortino=0.000 | MaxDD=100.00% | Trades=200
+2026-03-16 09:07:45,311 | INFO     | WalkForward | Processing fold 34/56
+2026-03-16 09:07:50,331 | INFO     | H4BiasModel | H4BiasModel trained for EURUSD on 2191 samples, 14 features
+2026-03-16 09:08:01,345 | INFO     | M15EntryModel | M15EntryModel trained for EURUSD | long hit rate: 26.69% | short hit rate: 27.31% | samples: 35041 | features: 37
+2026-03-16 09:08:27,426 | INFO     | WalkForward | Fold 34: FAIL | Sortino=0.000 | MaxDD=100.00% | Trades=200
+2026-03-16 09:08:27,427 | INFO     | WalkForward | Processing fold 35/56
+2026-03-16 09:08:32,471 | INFO     | H4BiasModel | H4BiasModel trained for EURUSD on 2191 samples, 14 features
+2026-03-16 09:08:43,448 | INFO     | M15EntryModel | M15EntryModel trained for EURUSD | long hit rate: 27.71% | short hit rate: 26.66% | samples: 35041 | features: 37
+2026-03-16 09:09:21,212 | INFO     | WalkForward | Fold 35: FAIL | Sortino=0.000 | MaxDD=100.00% | Trades=200
+2026-03-16 09:09:21,212 | INFO     | WalkForward | Processing fold 36/56
+2026-03-16 09:09:26,481 | INFO     | H4BiasModel | H4BiasModel trained for EURUSD on 2191 samples, 14 features
+2026-03-16 09:09:37,689 | INFO     | M15EntryModel | M15EntryModel trained for EURUSD | long hit rate: 26.95% | short hit rate: 27.32% | samples: 35041 | features: 37
+2026-03-16 09:10:08,705 | INFO     | WalkForward | Fold 36: PASS | Sortino=0.000 | MaxDD=13.64% | Trades=200
+2026-03-16 09:10:08,706 | INFO     | WalkForward | Processing fold 37/56
+2026-03-16 09:10:14,504 | INFO     | H4BiasModel | H4BiasModel trained for EURUSD on 2191 samples, 14 features
+2026-03-16 09:10:27,176 | INFO     | M15EntryModel | M15EntryModel trained for EURUSD | long hit rate: 27.51% | short hit rate: 26.47% | samples: 35041 | features: 37
+2026-03-16 09:10:59,964 | INFO     | WalkForward | Fold 37: FAIL | Sortino=0.000 | MaxDD=54.55% | Trades=200
+2026-03-16 09:10:59,964 | INFO     | WalkForward | Processing fold 38/56
+2026-03-16 09:11:06,274 | INFO     | H4BiasModel | H4BiasModel trained for EURUSD on 2197 samples, 14 features
+2026-03-16 09:11:18,899 | INFO     | M15EntryModel | M15EntryModel trained for EURUSD | long hit rate: 28.20% | short hit rate: 26.87% | samples: 35137 | features: 37
+2026-03-16 09:11:46,694 | INFO     | WalkForward | Fold 38: FAIL | Sortino=0.000 | MaxDD=100.00% | Trades=200
+2026-03-16 09:11:46,695 | INFO     | WalkForward | Processing fold 39/56
+2026-03-16 09:11:52,571 | INFO     | H4BiasModel | H4BiasModel trained for EURUSD on 2197 samples, 14 features
+2026-03-16 09:12:05,003 | INFO     | M15EntryModel | M15EntryModel trained for EURUSD | long hit rate: 28.36% | short hit rate: 27.08% | samples: 35137 | features: 37
+2026-03-16 09:12:33,883 | INFO     | WalkForward | Fold 39: PASS | Sortino=0.000 | MaxDD=30.00% | Trades=200
+2026-03-16 09:12:33,884 | INFO     | WalkForward | Processing fold 40/56
+2026-03-16 09:12:40,207 | INFO     | H4BiasModel | H4BiasModel trained for EURUSD on 2197 samples, 14 features
+2026-03-16 09:12:53,486 | INFO     | M15EntryModel | M15EntryModel trained for EURUSD | long hit rate: 29.59% | short hit rate: 26.55% | samples: 35137 | features: 37
+2026-03-16 09:13:23,974 | INFO     | WalkForward | Fold 40: FAIL | Sortino=0.000 | MaxDD=60.00% | Trades=200
+2026-03-16 09:13:23,975 | INFO     | WalkForward | Processing fold 41/56
+2026-03-16 09:13:30,087 | INFO     | H4BiasModel | H4BiasModel trained for EURUSD on 2197 samples, 14 features
+2026-03-16 09:13:43,880 | INFO     | M15EntryModel | M15EntryModel trained for EURUSD | long hit rate: 29.64% | short hit rate: 26.70% | samples: 35137 | features: 37
+2026-03-16 09:14:21,571 | INFO     | WalkForward | Fold 41: FAIL | Sortino=0.000 | MaxDD=100.00% | Trades=200
+2026-03-16 09:14:21,572 | INFO     | WalkForward | Processing fold 42/56
+2026-03-16 09:14:31,664 | INFO     | H4BiasModel | H4BiasModel trained for EURUSD on 2191 samples, 14 features
+2026-03-16 09:14:45,693 | INFO     | M15EntryModel | M15EntryModel trained for EURUSD | long hit rate: 28.84% | short hit rate: 26.81% | samples: 35041 | features: 37
+2026-03-16 09:15:19,799 | INFO     | WalkForward | Fold 42: PASS | Sortino=0.000 | MaxDD=40.00% | Trades=200
+2026-03-16 09:15:19,799 | INFO     | WalkForward | Processing fold 43/56
+2026-03-16 09:15:26,184 | INFO     | H4BiasModel | H4BiasModel trained for EURUSD on 2191 samples, 14 features
+2026-03-16 09:15:39,411 | INFO     | M15EntryModel | M15EntryModel trained for EURUSD | long hit rate: 27.70% | short hit rate: 27.35% | samples: 35041 | features: 37
+2026-03-16 09:16:18,520 | INFO     | WalkForward | Fold 43: FAIL | Sortino=0.000 | MaxDD=62.86% | Trades=200
+2026-03-16 09:16:18,521 | INFO     | WalkForward | Processing fold 44/56
+2026-03-16 09:16:24,884 | INFO     | H4BiasModel | H4BiasModel trained for EURUSD on 2191 samples, 14 features
+2026-03-16 09:16:39,053 | INFO     | M15EntryModel | M15EntryModel trained for EURUSD | long hit rate: 26.36% | short hit rate: 27.48% | samples: 35041 | features: 37
+2026-03-16 09:17:11,347 | INFO     | WalkForward | Fold 44: FAIL | Sortino=0.000 | MaxDD=60.00% | Trades=200
+2026-03-16 09:17:11,347 | INFO     | WalkForward | Processing fold 45/56
+2026-03-16 09:17:17,883 | INFO     | H4BiasModel | H4BiasModel trained for EURUSD on 2191 samples, 14 features
+2026-03-16 09:17:32,233 | INFO     | M15EntryModel | M15EntryModel trained for EURUSD | long hit rate: 25.08% | short hit rate: 28.77% | samples: 35041 | features: 37
+2026-03-16 09:18:09,734 | INFO     | WalkForward | Fold 45: PASS | Sortino=0.000 | MaxDD=15.00% | Trades=200
+2026-03-16 09:18:09,734 | INFO     | WalkForward | Processing fold 46/56
+2026-03-16 09:18:16,371 | INFO     | H4BiasModel | H4BiasModel trained for EURUSD on 2191 samples, 14 features
+2026-03-16 09:18:35,118 | INFO     | M15EntryModel | M15EntryModel trained for EURUSD | long hit rate: 25.76% | short hit rate: 28.43% | samples: 35041 | features: 37
+2026-03-16 09:19:16,373 | INFO     | WalkForward | Fold 46: FAIL | Sortino=0.000 | MaxDD=100.00% | Trades=200
+2026-03-16 09:19:16,374 | INFO     | WalkForward | Processing fold 47/56
+2026-03-16 09:19:23,420 | INFO     | H4BiasModel | H4BiasModel trained for EURUSD on 2191 samples, 14 features
+2026-03-16 09:19:38,202 | INFO     | M15EntryModel | M15EntryModel trained for EURUSD | long hit rate: 25.63% | short hit rate: 28.72% | samples: 35041 | features: 37
+2026-03-16 09:20:07,061 | INFO     | WalkForward | Fold 47: PASS | Sortino=0.000 | MaxDD=16.22% | Trades=200
+2026-03-16 09:20:07,062 | INFO     | WalkForward | Processing fold 48/56
+2026-03-16 09:20:14,400 | INFO     | H4BiasModel | H4BiasModel trained for EURUSD on 2191 samples, 14 features
+2026-03-16 09:20:30,948 | INFO     | M15EntryModel | M15EntryModel trained for EURUSD | long hit rate: 26.51% | short hit rate: 29.49% | samples: 35041 | features: 37
+2026-03-16 09:21:03,430 | INFO     | WalkForward | Fold 48: FAIL | Sortino=0.000 | MaxDD=100.00% | Trades=200
+2026-03-16 09:21:03,430 | INFO     | WalkForward | Processing fold 49/56
+2026-03-16 09:21:11,040 | INFO     | H4BiasModel | H4BiasModel trained for EURUSD on 2191 samples, 14 features
+2026-03-16 09:21:25,497 | INFO     | M15EntryModel | M15EntryModel trained for EURUSD | long hit rate: 27.25% | short hit rate: 28.36% | samples: 35041 | features: 37
+2026-03-16 09:22:01,043 | INFO     | WalkForward | Fold 49: FAIL | Sortino=0.000 | MaxDD=100.00% | Trades=200
+2026-03-16 09:22:01,043 | INFO     | WalkForward | Processing fold 50/56
+2026-03-16 09:22:09,018 | INFO     | H4BiasModel | H4BiasModel trained for EURUSD on 2191 samples, 14 features
+2026-03-16 09:22:26,720 | INFO     | M15EntryModel | M15EntryModel trained for EURUSD | long hit rate: 27.79% | short hit rate: 27.90% | samples: 35041 | features: 37
+2026-03-16 09:23:02,061 | INFO     | WalkForward | Fold 50: PASS | Sortino=0.000 | MaxDD=17.65% | Trades=200
+2026-03-16 09:23:02,062 | INFO     | WalkForward | Processing fold 51/56
+2026-03-16 09:23:11,749 | INFO     | H4BiasModel | H4BiasModel trained for EURUSD on 2191 samples, 14 features
+2026-03-16 09:23:27,756 | INFO     | M15EntryModel | M15EntryModel trained for EURUSD | long hit rate: 29.28% | short hit rate: 26.09% | samples: 35041 | features: 37
+2026-03-16 09:24:05,479 | INFO     | WalkForward | Fold 51: PASS | Sortino=0.000 | MaxDD=33.96% | Trades=200
+2026-03-16 09:24:05,480 | INFO     | WalkForward | Processing fold 52/56
+2026-03-16 09:24:16,574 | INFO     | H4BiasModel | H4BiasModel trained for EURUSD on 2155 samples, 14 features
+2026-03-16 09:24:34,114 | INFO     | M15EntryModel | M15EntryModel trained for EURUSD | long hit rate: 30.21% | short hit rate: 24.58% | samples: 34465 | features: 37
+2026-03-16 09:25:11,412 | INFO     | WalkForward | Fold 52: FAIL | Sortino=0.000 | MaxDD=100.00% | Trades=200
+2026-03-16 09:25:11,412 | INFO     | WalkForward | Processing fold 53/56
+2026-03-16 09:25:18,993 | INFO     | H4BiasModel | H4BiasModel trained for EURUSD on 2155 samples, 14 features
+2026-03-16 09:25:34,422 | INFO     | M15EntryModel | M15EntryModel trained for EURUSD | long hit rate: 29.42% | short hit rate: 25.21% | samples: 34465 | features: 37
+2026-03-16 09:26:17,186 | INFO     | WalkForward | Fold 53: FAIL | Sortino=0.000 | MaxDD=100.00% | Trades=200
+2026-03-16 09:26:17,187 | INFO     | WalkForward | Processing fold 54/56
+2026-03-16 09:26:24,798 | INFO     | H4BiasModel | H4BiasModel trained for EURUSD on 2161 samples, 14 features
+2026-03-16 09:26:39,927 | INFO     | M15EntryModel | M15EntryModel trained for EURUSD | long hit rate: 28.66% | short hit rate: 24.95% | samples: 34561 | features: 37
+2026-03-16 09:27:22,706 | INFO     | WalkForward | Fold 54: FAIL | Sortino=0.000 | MaxDD=100.00% | Trades=200
+2026-03-16 09:27:22,706 | INFO     | WalkForward | Processing fold 55/56
+2026-03-16 09:27:32,364 | INFO     | H4BiasModel | H4BiasModel trained for EURUSD on 2161 samples, 14 features
+2026-03-16 09:27:48,024 | INFO     | M15EntryModel | M15EntryModel trained for EURUSD | long hit rate: 27.67% | short hit rate: 26.52% | samples: 34561 | features: 37
+2026-03-16 09:28:26,199 | INFO     | WalkForward | Fold 55: FAIL | Sortino=0.000 | MaxDD=60.00% | Trades=200
+2026-03-16 09:28:26,199 | INFO     | WalkForward | Processing fold 56/56
+2026-03-16 09:28:34,125 | INFO     | H4BiasModel | H4BiasModel trained for EURUSD on 2197 samples, 14 features
+2026-03-16 09:28:49,515 | INFO     | M15EntryModel | M15EntryModel trained for EURUSD | long hit rate: 27.80% | short hit rate: 26.77% | samples: 35137 | features: 37
+2026-03-16 09:29:24,429 | INFO     | WalkForward | Fold 56: FAIL | Sortino=0.000 | MaxDD=90.00% | Trades=200
+2026-03-16 09:29:24,430 | INFO     | WalkForward | QMRP complete: deploy=False | New Sortino 0.000 did not beat production 0.000
+2026-03-16 09:29:24,483 | INFO     | TrainScript | QMRP complete | deploy=False | New Sortino 0.000 did not beat production 0.000
+2026-03-16 09:29:24,483 | INFO     | TrainScript | Training final models on full dataset...
+2026-03-16 09:29:31,550 | INFO     | TrainScript | H4 training samples: 34870
+2026-03-16 09:29:32,198 | INFO     | H4BiasModel | H4BiasModel trained for EURUSD on 34870 samples, 14 features
+2026-03-16 09:29:32,255 | INFO     | TrainScript | H4 model saved: models\saved\h4_bias_EURUSD.pkl
+2026-03-16 09:30:03,433 | INFO     | M15EntryModel | M15EntryModel trained for EURUSD | long hit rate: 27.96% | short hit rate: 27.76% | samples: 560064 | features: 37
+2026-03-16 09:30:03,556 | INFO     | M15EntryModel | M15EntryModel saved for EURUSD
+2026-03-16 09:30:03,556 | INFO     | TrainScript | M15 model saved for EURUSD
+2026-03-16 09:30:03,628 | INFO     | TrainScript | Training complete for EURUSD
+2026-03-16 09:30:03,658 | INFO     | TrainScript | 
+Training complete: 1/1 instruments trained
+2026-03-16 09:30:03,658 | INFO     | TrainScript | All models ready. Run 'python bot.py' to start live trading.
+2026-03-16 09:34:10,129 | INFO     | TradingBot | ============================================================
+2026-03-16 09:34:10,129 | INFO     | TradingBot |   AI SWING TRADING BOT v2.0 — STARTING
+2026-03-16 09:34:10,130 | INFO     | TradingBot | ============================================================
+2026-03-16 09:34:10,781 | INFO     | MT5Engine | MT5 connected — account 7386248 | balance 500.0 | equity 500.0 | server FPMarketsSC-Demo
+2026-03-16 09:34:10,782 | INFO     | TradingBot | Account equity: 500.0 USD
+2026-03-16 09:34:13,266 | INFO     | H4BiasModel | H4BiasModel loaded from models\saved\h4_bias_EURUSD.pkl
+2026-03-16 09:34:13,326 | INFO     | M15EntryModel | M15EntryModel loaded for EURUSD
+2026-03-16 09:34:13,380 | INFO     | H4BiasModel | H4BiasModel loaded from models\saved\h4_bias_GBPUSD.pkl
+2026-03-16 09:34:13,448 | INFO     | M15EntryModel | M15EntryModel loaded for GBPUSD
+2026-03-16 09:34:13,449 | INFO     | NewsFilter | Finnhub free tier detected — news filter bypassed, trading permitted
+2026-03-16 09:34:13,449 | INFO     | TradingBot | Bot started. Entering main loop...
+2026-03-16 09:34:13,471 | INFO     | TradingBot | Daily DB backup: logs\backups\trades_2026-03-16.db
+2026-03-16 09:35:36,058 | INFO     | TradingBot | Shutdown signal received — stopping bot gracefully...
+2026-03-16 09:35:36,059 | INFO     | MT5Engine | MT5 disconnected
