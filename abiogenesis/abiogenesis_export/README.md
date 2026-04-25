@@ -142,3 +142,6 @@ These are the moments worth paying attention to.
 | Cosmic ray | UV-induced novel bond / random chemical injection |
 | Dominant sequence > 5% | A proto-species emerging |
 | Autocatalytic pair | The RNA World — strands that template their own replication |
+
+
+NB: However this project was a failure since the exact simulation was not achieved, but I will continue to host it on this repository for anyone who is willing to improve and better it. Have fun with it :)
