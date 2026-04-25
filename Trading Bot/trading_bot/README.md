@@ -203,4 +203,7 @@ All 12 issues from the v1.0 review have been implemented:
 This bot is provided for educational and research purposes.
 Algorithmic trading involves significant financial risk.
 Past backtest performance does not guarantee future results.
-Always test on a demo account before deploying real capital.
+Always test on a demo account before deploying real capital. 
+Also, if you seek to see prior proto types to gain a better understanding
+of the changes and improvements implemented in v2.0, do contact me via my
+portfolio site at www.lethasky.co.za.
